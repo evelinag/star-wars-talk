@@ -16,25 +16,6 @@ Contains *some* spoilers for episodes I - VII <br/>
 
 - data-background : images/StarWarsIntro-full-noloop.gif
 
-' Main message: F# is good for data science
-' - parsing script files
-' - displaying the network with D3.js
-' - interoperability with R
-' - type providers - swapi
-' - type providers for neo4j? Fill database with swapi, then perform queries
-' - why even do this - fun interpretable data - find how methods perform & 
-' compare -> then use them on more complex data (some cancer example)
-' - other applications of the same methods
-'    - type providers for data sources - show how to access data sources in other languages? python, R, scala?
-'     - polyglot programming - combination with R
-'    - network analysis - social network analysis on Twitter, biology, distribution networks
-
-' Takeaway points:
-' - F# is a good language for data science - allows good combination with other methodologies
-' + real-world data science is messy
-' + how to write a parser in a nice way
-' + principles of network analysis
-
 ' The Galactic Republic is confused. Not only are the Star Wars scripts available just in poorly formatted HTML format, but there are also characters who are important in the films but they do not speak in the scripts at all! The Jedi Council has summoned a young Jedi knight Evelina to help the republic. The F#orce is strong with her but her task is not simple. She has to parse the scripts, extract the Star Wars social network and finally answer the most important question in the galaxy: Why were the prequels crap?
 
 ----------
