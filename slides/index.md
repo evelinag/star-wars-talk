@@ -8,9 +8,13 @@
 
 - data-background : #000000
 
-# Warning
+# The F#orce Awakens
 
-Contains *some* spoilers for episodes I - VII <br/>
+<br/>
+
+## *Warning*
+
+Contains *some* spoilers for Star Wars, episodes I - VII <br/>
 
 --------
 
@@ -45,17 +49,21 @@ Contains *some* spoilers for episodes I - VII <br/>
 # Parsing scripts
 
     [lang=html]
-    <b> INT. MOS EISLEY SPACEPORT - DOCKING BAY 94 </b>
+    <pre>
+    ...
+        <b> INT. MOS EISLEY SPACEPORT - DOCKING BAY 94 </b>
 
     Chewbacca leads the group into a giant dirt pit that is 
     Docking Bay 94. Resting in the middle of the huge hole is a 
     large, round, beat-up, pieced-together hunk of junk that 
     could only loosely be called a starship.
 
-    <b> LUKE </b>
+        <b> LUKE </b>
     What a piece of junk.
 
     The tall figure of Han Solo comes down the boarding ramp.
+    ...
+    </pre>
 
 -----
 - data-background : #212d30
@@ -79,6 +87,28 @@ Contains *some* spoilers for episodes I - VII <br/>
 
 <img src="images/parsing-code-original.png" style="width: 960px" />
 
+-----
+
+- data-background : #212d30
+
+# Parsing scripts
+
+    [lang=html]
+    <pre>
+    ...
+        <b> INT. MOS EISLEY SPACEPORT - DOCKING BAY 94 </b>
+
+    Chewbacca leads the group into a giant dirt pit that is 
+    Docking Bay 94. Resting in the middle of the huge hole is a 
+    large, round, beat-up, pieced-together hunk of junk that 
+    could only loosely be called a starship.
+
+        <b> LUKE </b>
+    What a piece of junk.
+
+    The tall figure of Han Solo comes down the boarding ramp.
+    ...
+    </pre>
 
 -----
 - data-background : #212d30
@@ -152,7 +182,7 @@ hide complexity behind readable code
 
 --------
 
-- data-background : images/darth-maul-loop3.gif
+- data-background : images/ewoks-loop3.gif
 
 --------
 
@@ -165,6 +195,10 @@ hide complexity behind readable code
 --------
 
 <img src="images/tion-medon-closeup.png" style="width: 900px" />
+
+--------
+
+- data-background : images/tion-medon-photo.png
 
 --------
 
