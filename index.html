@@ -46,70 +46,76 @@
 </head>
 <body>
     <div class="reveal">
-        <div class="tip" id="fs1">namespace Microsoft.FSharp</div>
-<div class="tip" id="fs2">namespace Microsoft.FSharp.Data</div>
-<div class="tip" id="fs3">val url : string<br /><br />Full name: index.url</div>
-<div class="tip" id="fs4">val episodeHtml : obj<br /><br />Full name: index.episodeHtml</div>
-<div class="tip" id="fs5">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs6">val head : source:seq&lt;&#39;T&gt; -&gt; &#39;T<br /><br />Full name: Microsoft.FSharp.Collections.Seq.head</div>
-<div class="tip" id="fs7">val boldItems : obj list<br /><br />Full name: index.boldItems</div>
-<div class="tip" id="fs8">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member GetSlice : startIndex:int option * endIndex:int option -&gt; &#39;T list<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
-<div class="tip" id="fs9">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; list:&#39;T list -&gt; &#39;U list<br /><br />Full name: Microsoft.FSharp.Collections.List.map</div>
-<div class="tip" id="fs10">val x : obj</div>
-<div class="tip" id="fs11">val parseScenes : sceneAcc:&#39;a list -&gt; characterAcc:&#39;b -&gt; items:string list -&gt; &#39;a list<br /><br />Full name: index.parseScenes</div>
-<div class="tip" id="fs12">val sceneAcc : &#39;a list</div>
-<div class="tip" id="fs13">val characterAcc : &#39;b</div>
-<div class="tip" id="fs14">val items : string list</div>
-<div class="tip" id="fs15">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = System.String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
-<div class="tip" id="fs16">type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
-<div class="tip" id="fs17">val item : string</div>
-<div class="tip" id="fs18">val rest : string list</div>
-<div class="tip" id="fs19">val rev : list:&#39;T list -&gt; &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List.rev</div>
-<div class="tip" id="fs20">val text : string</div>
-<div class="tip" id="fs21">val scenePattern : string</div>
-<div class="tip" id="fs22">val namePattern : string</div>
-<div class="tip" id="fs23">val centrality : obj<br /><br />Full name: index.centrality</div>
-<div class="tip" id="fs24">val density : obj<br /><br />Full name: index.density</div>
-<div class="tip" id="fs25">val clusteringCoef : obj<br /><br />Full name: index.clusteringCoef</div>
-<div class="tip" id="fs26">module Array<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs27">val mapi : mapping:(int -&gt; &#39;T -&gt; &#39;U) -&gt; array:&#39;T [] -&gt; &#39;U []<br /><br />Full name: Microsoft.FSharp.Collections.Array.mapi</div>
-<div class="tip" id="fs28">val i : int</div>
-<div class="tip" id="fs29">val c : float</div>
+        <div class="tip" id="fs1">val parseScenes : sceneAcc:&#39;a list -&gt; characterAcc:&#39;b -&gt; items:string list -&gt; &#39;a list<br /><br />Full name: index.parseScenes</div>
+<div class="tip" id="fs2">val sceneAcc : &#39;a list</div>
+<div class="tip" id="fs3">val characterAcc : &#39;b</div>
+<div class="tip" id="fs4">val items : string list</div>
+<div class="tip" id="fs5">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = System.String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
+<div class="tip" id="fs6">type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
+<div class="tip" id="fs7">val item : string</div>
+<div class="tip" id="fs8">val rest : string list</div>
+<div class="tip" id="fs9">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member GetSlice : startIndex:int option * endIndex:int option -&gt; &#39;T list<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
+<div class="tip" id="fs10">val rev : list:&#39;T list -&gt; &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List.rev</div>
+<div class="tip" id="fs11">val text : string</div>
+<div class="tip" id="fs12">val scenePattern : string</div>
+<div class="tip" id="fs13">val namePattern : string</div>
+<div class="tip" id="fs14">val b : obj<br /><br />Full name: index.b</div>
 
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section >
-<section data-background="#000000">
-<h1>The F#orce Awakens</h1>
-<br/>
-<h2><em>Warning</em></h2>
-<p>Contains <em>some</em> spoilers for Star Wars, episodes I - VII <br/></p>
+<section data-background="images/kylo.gif">
+<table>
+<tr>
+  <td class="noborder" style="width:50%;"></td>
+   <td class="noborder" style="width:50%;">
+<h2><div class="white">The F#orce Awakens</div></h2>
+<h2><div class="white">Evelina Gabasova</div></h2>
+<p><div class="white">@evelgab </div><br /><br />
+<div class="white"><em>Warning</em> </div>
+<div class="white">Contains <em>some</em> spoilers</div>
+</td>
+</tr>
+</table></p>
 </section>
-<section data-background="images/StarWarsIntro-full-noloop.gif">
+<section data-background="images/tcga-dna.jpg">
 <aside class="notes">
-The Galactic Republic is confused. Not only are the Star Wars scripts available just in poorly formatted HTML format, but there are also characters who are important in the films but they do not speak in the scripts at all! The Jedi Council has summoned a young Jedi knight Evelina to help the republic. The F#orce is strong with her but her task is not simple. She has to parse the scripts, extract the Star Wars social network and finally answer the most important question in the galaxy: Why were the prequels crap?<br/>
+During the day, I do bioinformatics and computational biology,<br/>
+researching mechanisms of early carcinogenesis at Cambridge<br/>
+University - I deal with DNA, genes, proteins etc...<br/>
+It's a very important work, we work on pancreatic cancer which <br/>
+one of the least understood types of cancer. It's very hard to treat<br/>
+and mortality hasn't improved much over the last 10 years, so it's a big <br/>
+and important challenge. We use quite a lot of methods, based on <br/>
+statistics, machine learning and network analysis. <br/>
+But biology is complex and sometimes it's a bit too much...<br/>
 </aside>
 </section>
-<section data-background="#000000">
-<h1><div class="sw"> the star wars </div></h1>
-<h1><div class="sw"> social network</div></h1>
+<section data-background="images/pathways.png">
 <aside class="notes">
-about me<br/>
-what I was trying to do<br/>
-example of several programming tasks & how to solve them<br/>
+do you know the feeling? So because I love working with data, outside<br/>
+of work I like to play with other datasets, datasets that are<br/>
+probably less useful...<br/>
 </aside>
+</section>
+<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro.mp4" data-background-color="#000000">
+</section>
+<section data-background-transition="fade" data-background="images/SWLogo.png" data-background-color="#000000">
 </section>
 <section >
+<p><img src="images/scripts.png" alt="" /></p>
+</section>
+<section data-background="#f2a063">
 <p><img src="images/script-example.png" alt="script structure" /></p>
 <aside class="notes">
 This structure is highly formalised, names have to be in boldface and centered etc.<br/>
 </aside>
 </section>
-<section >
-<p><img src="images/imsdb.png" alt="imsdb" /></p>
+<section data-background="white">
+<p><img src="images/network-relations.png" alt="" /></p>
 </section>
 <section data-background="#212d30">
-<h1>Parsing scripts</h1>
+<h3>Parsing scripts</h3>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
@@ -142,73 +148,18 @@ The tall figure of Han Solo comes down the boarding ramp.
 ...
 <span class="k">&lt;/</span><span class="i">pre</span><span class="k">&gt;</span>
 </code></pre></td></tr></table>
+<aside class="notes">
+fsharp data has decent html parser which lets you select all <br/>
+the elements in bold    <br/>
+</aside>
+</section>
+<section data-background="images/parsing-code-original2.png">
+<div style="background-color: rgba(0, 0, 0, 0.9); color: #000000; padding: 20px;">
+  <h1 style="color: #ffffff">Parsing scripts</h3>
+</div>
 </section>
 <section data-background="#212d30">
-<h1>Parsing scripts</h1>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-<span class="l">7: </span>
-<span class="l">8: </span>
-<span class="l">9: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Data</span>
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">url</span> <span class="o">=</span> <span class="s">&quot;http://www.imsdb.com/scripts/Star-Wars-A-New-Hope.html&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">episodeHtml</span> <span class="o">=</span> 
-    <span class="i">HtmlDocument</span><span class="o">.</span><span class="i">Load</span>(<span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">url</span>)<span class="o">.</span><span class="i">Descendants</span>(<span class="s">&quot;pre&quot;</span>) <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="t">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="f">head</span>
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">boldItems</span> <span class="o">=</span> 
-    <span onmouseout="hideTip(event, 'fs4', 9)" onmouseover="showTip(event, 'fs4', 9)" class="i">episodeHtml</span><span class="o">.</span><span class="i">Elements</span>(<span class="s">&quot;b&quot;</span>) 
-    <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs8', 10)" onmouseover="showTip(event, 'fs8', 10)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 11)" onmouseover="showTip(event, 'fs9', 11)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs10', 12)" onmouseover="showTip(event, 'fs10', 12)" class="i">x</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 13)" onmouseover="showTip(event, 'fs10', 13)" class="i">x</span><span class="o">.</span><span class="i">InnerText</span>()<span class="o">.</span><span class="i">Trim</span>())
-</code></pre></td>
-</tr>
-</table>
-</section>
-<section data-background="#212d30">
-<h1>Parsing scripts</h1>
-<img src="images/parsing-code-original.png" style="width: 960px" />
-</section>
-<section data-background="#212d30">
-<h1>Parsing scripts</h1>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
-<span class="l">15: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="html"><span class="k">&lt;</span><span class="i">pre</span><span class="k">&gt;</span>
-...
-    <span class="k">&lt;</span><span class="i">b</span><span class="k">&gt;</span> INT. MOS EISLEY SPACEPORT - DOCKING BAY 94 <span class="k">&lt;/</span><span class="i">b</span><span class="k">&gt;</span>
-
-Chewbacca leads the group into a giant dirt pit that is 
-Docking Bay 94. Resting in the middle of the huge hole is a 
-large, round, beat-up, pieced-together hunk of junk that 
-could only loosely be called a starship.
-
-    <span class="k">&lt;</span><span class="i">b</span><span class="k">&gt;</span> LUKE <span class="k">&lt;/</span><span class="i">b</span><span class="k">&gt;</span>
-What a piece of junk.
-
-The tall figure of Han Solo comes down the boarding ramp.
-...
-<span class="k">&lt;/</span><span class="i">pre</span><span class="k">&gt;</span>
-</code></pre></td></tr></table>
-</section>
-<section data-background="#212d30">
-<h1>Parsing scripts</h1>
+<h3>Parsing scripts</h3>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
@@ -224,26 +175,26 @@ The tall figure of Han Solo comes down the boarding ramp.
 <span class="l">13: </span>
 <span class="l">14: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="f">parseScenes</span> <span onmouseout="hideTip(event, 'fs12', 15)" onmouseover="showTip(event, 'fs12', 15)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs13', 16)" onmouseover="showTip(event, 'fs13', 16)" class="i">characterAcc</span> (<span onmouseout="hideTip(event, 'fs14', 17)" onmouseover="showTip(event, 'fs14', 17)" class="i">items</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs15', 18)" onmouseover="showTip(event, 'fs15', 18)" class="t">string</span> <span onmouseout="hideTip(event, 'fs16', 19)" onmouseover="showTip(event, 'fs16', 19)" class="t">list</span>) <span class="o">=</span>
-   <span class="k">match</span> <span onmouseout="hideTip(event, 'fs14', 20)" onmouseover="showTip(event, 'fs14', 20)" class="i">items</span> <span class="k">with</span>
-   | <span onmouseout="hideTip(event, 'fs17', 21)" onmouseover="showTip(event, 'fs17', 21)" class="i">item</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs18', 22)" onmouseover="showTip(event, 'fs18', 22)" class="i">rest</span> <span class="k">-&gt;</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="f">parseScenes</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">characterAcc</span> (<span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">items</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="t">string</span> <span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="t">list</span>) <span class="o">=</span>
+   <span class="k">match</span> <span onmouseout="hideTip(event, 'fs4', 7)" onmouseover="showTip(event, 'fs4', 7)" class="i">items</span> <span class="k">with</span>
+   | <span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">item</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">rest</span> <span class="k">-&gt;</span>
        <span class="k">match</span> <span class="i">item</span> <span class="k">with</span>
        | <span class="i">SceneTitle</span> <span class="i">title</span> <span class="k">-&gt;</span> 
             <span class="c">// add the finished scene to the scene accumulator</span>
-            <span class="k">let</span> <span class="i">fullScene</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="i">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 24)" onmouseover="showTip(event, 'fs19', 24)" class="i">rev</span> <span onmouseout="hideTip(event, 'fs13', 25)" onmouseover="showTip(event, 'fs13', 25)" class="i">characterAcc</span>
-            <span onmouseout="hideTip(event, 'fs11', 26)" onmouseover="showTip(event, 'fs11', 26)" class="i">parseScenes</span> (<span class="i">fullScene</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs12', 27)" onmouseover="showTip(event, 'fs12', 27)" class="i">sceneAcc</span>) [] <span onmouseout="hideTip(event, 'fs18', 28)" onmouseover="showTip(event, 'fs18', 28)" class="i">rest</span>
+            <span class="k">let</span> <span class="i">fullScene</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">rev</span> <span onmouseout="hideTip(event, 'fs3', 12)" onmouseover="showTip(event, 'fs3', 12)" class="i">characterAcc</span>
+            <span onmouseout="hideTip(event, 'fs1', 13)" onmouseover="showTip(event, 'fs1', 13)" class="i">parseScenes</span> (<span class="i">fullScene</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="i">sceneAcc</span>) [] <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="i">rest</span>
        | <span class="i">Name</span> <span class="i">name</span> <span class="k">-&gt;</span> 
             <span class="c">// add character&#39;s name to the character accumulator</span>
-            <span onmouseout="hideTip(event, 'fs11', 29)" onmouseover="showTip(event, 'fs11', 29)" class="i">parseScenes</span> <span onmouseout="hideTip(event, 'fs12', 30)" onmouseover="showTip(event, 'fs12', 30)" class="i">sceneAcc</span> (<span class="i">name</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs13', 31)" onmouseover="showTip(event, 'fs13', 31)" class="i">characterAcc</span>) <span onmouseout="hideTip(event, 'fs18', 32)" onmouseover="showTip(event, 'fs18', 32)" class="i">rest</span>
+            <span onmouseout="hideTip(event, 'fs1', 16)" onmouseover="showTip(event, 'fs1', 16)" class="i">parseScenes</span> <span onmouseout="hideTip(event, 'fs2', 17)" onmouseover="showTip(event, 'fs2', 17)" class="i">sceneAcc</span> (<span class="i">name</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs3', 18)" onmouseover="showTip(event, 'fs3', 18)" class="i">characterAcc</span>) <span onmouseout="hideTip(event, 'fs8', 19)" onmouseover="showTip(event, 'fs8', 19)" class="i">rest</span>
        | <span class="i">Word</span> <span class="k">-&gt;</span> <span class="c">// do nothing</span>
-            <span onmouseout="hideTip(event, 'fs11', 33)" onmouseover="showTip(event, 'fs11', 33)" class="i">parseScenes</span> <span onmouseout="hideTip(event, 'fs12', 34)" onmouseover="showTip(event, 'fs12', 34)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs13', 35)" onmouseover="showTip(event, 'fs13', 35)" class="i">characterAcc</span> <span onmouseout="hideTip(event, 'fs18', 36)" onmouseover="showTip(event, 'fs18', 36)" class="i">rest</span>
-   | [] <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs8', 37)" onmouseover="showTip(event, 'fs8', 37)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 38)" onmouseover="showTip(event, 'fs19', 38)" class="f">rev</span> <span onmouseout="hideTip(event, 'fs12', 39)" onmouseover="showTip(event, 'fs12', 39)" class="i">sceneAcc</span>     
+            <span onmouseout="hideTip(event, 'fs1', 20)" onmouseover="showTip(event, 'fs1', 20)" class="i">parseScenes</span> <span onmouseout="hideTip(event, 'fs2', 21)" onmouseover="showTip(event, 'fs2', 21)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs3', 22)" onmouseover="showTip(event, 'fs3', 22)" class="i">characterAcc</span> <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="i">rest</span>
+   | [] <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs9', 24)" onmouseover="showTip(event, 'fs9', 24)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 25)" onmouseover="showTip(event, 'fs10', 25)" class="f">rev</span> <span onmouseout="hideTip(event, 'fs2', 26)" onmouseover="showTip(event, 'fs2', 26)" class="i">sceneAcc</span>     
 </code></pre></td>
 </tr>
 </table>
 </section>
 <section data-background="#212d30">
-<h1>Parsing with active patterns</h1>
+<h3>Parsing with active patterns</h3>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
@@ -253,44 +204,23 @@ The tall figure of Han Solo comes down the boarding ramp.
 <span class="l">7: </span>
 <span class="l">8: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> (|<span class="p">SceneTitle</span>|<span class="p">Name</span>|<span class="p">Word</span>|) (<span onmouseout="hideTip(event, 'fs20', 40)" onmouseover="showTip(event, 'fs20', 40)" class="i">text</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 41)" onmouseover="showTip(event, 'fs15', 41)" class="t">string</span>) <span class="o">=</span>
-    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs21', 42)" onmouseover="showTip(event, 'fs21', 42)" class="i">scenePattern</span> <span class="o">=</span> <span class="s">&quot;[ 0-9]*(INT.|EXT.)[ A-Z0-9]&quot;</span>
-    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs22', 43)" onmouseover="showTip(event, 'fs22', 43)" class="i">namePattern</span> <span class="o">=</span> <span class="s">&quot;^[/A-Z0-9]+[-]*[/A-Z0-9 ]*[-]*[/A-Z0-9 ]+$&quot;</span>
-    <span class="k">if</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs20', 44)" onmouseover="showTip(event, 'fs20', 44)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs21', 45)" onmouseover="showTip(event, 'fs21', 45)" class="i">scenePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
-        <span class="p">SceneTitle</span> <span onmouseout="hideTip(event, 'fs20', 46)" onmouseover="showTip(event, 'fs20', 46)" class="i">text</span>
-    <span class="k">elif</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs20', 47)" onmouseover="showTip(event, 'fs20', 47)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs22', 48)" onmouseover="showTip(event, 'fs22', 48)" class="i">namePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
-        <span class="p">Name</span> <span onmouseout="hideTip(event, 'fs20', 49)" onmouseover="showTip(event, 'fs20', 49)" class="i">text</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> (|<span class="p">SceneTitle</span>|<span class="p">Name</span>|<span class="p">Word</span>|) (<span onmouseout="hideTip(event, 'fs11', 27)" onmouseover="showTip(event, 'fs11', 27)" class="i">text</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 28)" onmouseover="showTip(event, 'fs5', 28)" class="t">string</span>) <span class="o">=</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs12', 29)" onmouseover="showTip(event, 'fs12', 29)" class="i">scenePattern</span> <span class="o">=</span> <span class="s">&quot;[ 0-9]*(INT.|EXT.)[ A-Z0-9]&quot;</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 30)" onmouseover="showTip(event, 'fs13', 30)" class="i">namePattern</span> <span class="o">=</span> <span class="s">&quot;^[/A-Z0-9]+[-]*[/A-Z0-9 ]*[-]*[/A-Z0-9 ]+$&quot;</span>
+    <span class="k">if</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs11', 31)" onmouseover="showTip(event, 'fs11', 31)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs12', 32)" onmouseover="showTip(event, 'fs12', 32)" class="i">scenePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
+        <span class="p">SceneTitle</span> <span onmouseout="hideTip(event, 'fs11', 33)" onmouseover="showTip(event, 'fs11', 33)" class="i">text</span>
+    <span class="k">elif</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs11', 34)" onmouseover="showTip(event, 'fs11', 34)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs13', 35)" onmouseover="showTip(event, 'fs13', 35)" class="i">namePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
+        <span class="p">Name</span> <span onmouseout="hideTip(event, 'fs11', 36)" onmouseover="showTip(event, 'fs11', 36)" class="i">text</span>
     <span class="k">else</span> <span class="p">Word</span>
 </code></pre></td>
 </tr>
 </table>
 </section>
-<section data-background="#212d30">
+<section data-background="#550080">
 <h1>(| Active patterns |)</h1>
 <p>hide complexity behind readable code</p>
 </section>
-<section data-background="images/trashcompactor-loop3.gif">
-</section>
-<section >
-<p><img src="images/script-example2.png" alt="script structure - ugly" /></p>
-</section>
-<section data-background="images/r2d2beeps-loop3.gif">
-</section>
-<section >
-<p><img src="images/artoo.png" alt="R2-D2" /></p>
-</section>
-<section >
-<p><img src="images/chewie.png" alt="Chewbacca" /></p>
-</section>
-<section >
-<p><img src="images/equations1.png" alt="" /></p>
-</section>
-<section >
-<p><img src="images/equations2.png" alt="" /></p>
-</section>
-<section data-background="images/ewoks-loop3.gif">
-</section>
-<section data-background="images/lonelyluke-loop3.gif">
+<section data-background="images/itsatrap3.gif">
 </section>
 <section >
 <p><img src="images/tion-medon.png" alt="Tion Medon 1" /></p>
@@ -300,9 +230,34 @@ The tall figure of Han Solo comes down the boarding ramp.
 </section>
 <section data-background="images/tion-medon-photo.png">
 </section>
+<section data-background="images/r2d2beeps-loop3.gif">
+</section>
 <section >
-<h1>List of Star Wars characters</h1>
-<p><a href="https://swapi.co/">swapi.co</a></p>
+<p><img src="images/artoo.png" alt="R2-D2" /></p>
+</section>
+<section >
+<p><img src="images/chewie.png" alt="Chewbacca" /></p>
+</section>
+<section data-background="#550080">
+<h2>Number of <em>common</em> mentions</h2>
+<h1>⬇</h1>
+<h2>Number of interactions</h2>
+</section>
+<section >
+<p><img src="images/equations1.png" alt="" /></p>
+</section>
+<section >
+<p><img src="images/equations2.png" alt="" /></p>
+</section>
+<section data-background="images/ewoks.gif">
+</section>
+<section data-background="images/lonely-luke.gif">
+</section>
+<section data-background="#000000">
+<h3>Theorem:</h3>
+<h1>There's an API for everything.</h1>
+<h3>Proof:</h3>
+<h3><a href="https://swapi.co/">swapi.co</a></h3>
 </section>
 <section data-background="#000000">
 <p><img src="images/swapi.png" alt="swapi" /></p>
@@ -312,14 +267,42 @@ The tall figure of Han Solo comes down the boarding ramp.
 </section>
 <section data-background="images/darthvader-darkside-loop3.gif">
 </section>
-<section data-background="images/darthvader-nope-loop3.gif">
-</section>
 <section data-background="images/csharp-swapi.gif">
 </section>
 <section data-background="#000000">
-<h1><div class="sw">fsharp-swapi</div></h1>
+<p><img src="images/swapi-now.png" alt="swapi-langs" /></p>
+</section>
+<section data-background="#000000">
+<h3><div class="sw">fsharp-swapi</div></h3>
 <p><a href="https://github.com/evelinag/fsharp-swapi">github.com/evelinag/fsharp-swapi</a></p>
 <p><a href="https://swapi.co/documentation">swapi.co</a></p>
+</section>
+<section data-background="#000000">
+<h3><div class="sw">scenes</div></h3>
+<h1>+</h1>
+<h3><div class="sw">characters</div></h3>
+</section>
+<section >
+<p><img src="images/film_analysis.png" alt="" /></p>
+</section>
+<section >
+<img src="images/disney_analysis.png" style="width: 1200px" />
+</section>
+<section >
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 79.4117647058823}]}, {"c" : [{"v": "Episode 2"}, {"v": 78.968253968254}]}, {"c" : [{"v": "Episode 3"}, {"v": 81.7901234567901}]}, {"c" : [{"v": "Episode 4"}, {"v": 83.7310195227766}]}, {"c" : [{"v": "Episode 5"}, {"v": 79.9472295514512}]}, {"c" : [{"v": "Episode 6"}, {"v": 78.6516853932584}]}, {"c" : [{"v": "Episode 7"}, {"v": 68.4210526315789}]}]});
+    var options = {"hAxis":{"title":"Percentage of male characters (%)","viewWindowMode":"explicit","viewWindow":{"max":100,"min":0}},"legend":{"position":"none"},"title":"Ratio of male characters","width":1000,"height":550} 
+    var chart = new google.visualization.BarChart(document.getElementById('82c61e2a-02a3-497e-92e2-0d339641687c'));
+    chart.draw(data, options);
+}
+</script>
+<div id="82c61e2a-02a3-497e-92e2-0d339641687c" style="width: 800px; height: 600px;"></div>
+</section>
+<section data-background="images/rey_bb8-loop2.gif">
 </section>
 <section >
 <h1><div class="sw">visualization</div></h1>
@@ -328,78 +311,187 @@ The tall figure of Han Solo comes down the boarding ramp.
 <p><img src="images/d3js.png" alt="" /></p>
 <aside class="notes">
 Exporting and importing the network with Json?<br/>
+Because F# works very well with JSON, maybe I can just use something that will read the JSON <br/>
 </aside>
+</section>
+<section >
+<p><img src="images/fable.png" alt="" /></p>
+</section>
+<section >
+<p><img src="images/fable-logo.png" alt="" />
+<img src="images/fable-samples1.png" alt="" /></p>
+</section>
+<section >
+<p><img src="images/fable-logo.png" alt="" />
+<img src="images/fable-samples2.png" alt="" /></p>
 </section>
 <section data-background="images/networks/full_network-darth-vader.png">
 <a href="images/networks/interactions-merged.html" style="color: transparent;"> Big link to full network <br /> Big link to full network <br />Big link to full network </a>
 </section>
 <section >
-<h1><div class="sw">the phantom menace</div></h1>
+<h3><div class="sw">the phantom menace</div></h3>
 <a href="images/networks/episode1-interactions.html"><img src="images/networks/episode1.png" style="height:600px"/> </a>
 </section>
 <section >
-<h1><div class="sw">a new hope</div></h1>
+<h3><div class="sw">a new hope</div></h3>
 <a href="images/networks/episode4-interactions.html"><img src="images/networks/episode4.png" style="height:600px"/> </a>
 </section>
 <section >
-<h1><div class="sw">the force awakens</div></h1>
+<h3><div class="sw">the force awakens</div></h3>
 <a href="images/networks/episode7-interactions.html"><img src="images/networks/episode7_network.png" style="height:600px"/> </a>
 </section>
 <section >
-<h1><div class="sw">network analysis</div></h1>
-<p>Who is the most central character?</p>
-<ul>
-<li>Degree</li>
-<li>Betweenness</li>
-</ul>
+<h1>Network structure</h1>
+<p>How do the the movies differ?</p>
 </section>
 <section >
-<h1>Degree</h1>
+<h3><div class="sw"> Size </div></h3>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 38}]}, {"c" : [{"v": "Episode 2"}, {"v": 33}]}, {"c" : [{"v": "Episode 3"}, {"v": 25}]}, {"c" : [{"v": "Episode 4"}, {"v": 22}]}, {"c" : [{"v": "Episode 5"}, {"v": 21}]}, {"c" : [{"v": "Episode 6"}, {"v": 20}]}, {"c" : [{"v": "Episode 7"}, {"v": 27}]}]});
+    var options = {"colors":["#3bc4c4"],"hAxis":{"title":"Number of characters","viewWindowMode":"explicit","viewWindow":{"max":40,"min":0}},"legend":{"position":"none"},"title":"Number of characters","width":1000,"height":550} 
+    var chart = new google.visualization.BarChart(document.getElementById('793fedd1-18b7-4674-bbd9-333211512707'));
+    chart.draw(data, options);
+}
+</script>
+<div id="793fedd1-18b7-4674-bbd9-333211512707" style="width: 800px; height: 600px;"></div>
+</section>
+<section >
+<h3>Density</h3>
 <p><img src="images/network-basic.png" alt="Network" /></p>
 </section>
 <section >
-<h1>Degree</h1>
+<h3>Density</h3>
+<p><img src="images/full.png" alt="Network" /></p>
+</section>
+<section >
+<h3>Density</h3>
+<br />
+<p><span class="math">\[\begin{align}
+\text{Density} &amp;= \frac{\text{Existing connections}}{\text{Potential connections}} \\
+&amp; \\
+&amp;= \frac{\text{Existing connections}}{\frac{1}{2}N(N-1)}
+\end{align}\]</span></p>
+</section>
+<section >
+<h3><div class="sw"> Density </div></h3>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 19.203413940256}]}, {"c" : [{"v": "Episode 2"}, {"v": 19.1287878787879}]}, {"c" : [{"v": "Episode 3"}, {"v": 25.296442687747}]}, {"c" : [{"v": "Episode 4"}, {"v": 28.5714285714286}]}, {"c" : [{"v": "Episode 5"}, {"v": 26.1904761904762}]}, {"c" : [{"v": "Episode 6"}, {"v": 31.5789473684211}]}, {"c" : [{"v": "Episode 7"}, {"v": 26.2108262108262}]}]});
+    var options = {"colors":["#c43b80"],"hAxis":{"title":"Density (%)","viewWindowMode":"explicit","viewWindow":{"max":35,"min":15}},"legend":{"position":"none"},"title":"Network density","width":1000,"height":550}
+    var chart = new google.visualization.BarChart(document.getElementById('526513e7-b223-41f2-8ba0-0008433196f8'));
+    chart.draw(data, options);
+}
+</script>
+<div id="526513e7-b223-41f2-8ba0-0008433196f8" style="width: 800px; height: 600px;"></div>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<p><img src="images/network-basic.png" alt="Network" /></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<p><img src="images/clustering1.png" alt="Clustering" /></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<p><img src="images/clustering2.png" alt="Clustering" /></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<p><img src="images/clustering3.png" alt="Clustering" /></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<p><img src="images/clustering4.png" alt="Clustering" /></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<p><img src="images/clustering5.png" alt="Clustering" /></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<br />
+<p><span class="math">\[K_v = \text{Number of neighbours of $v$} \\
+E_v = \text{Number of links between neighbours of $v$} \\ \\
+\text{Clustering}(v) = \frac{E_v}{\frac{1}{2} K_v (K_v - 1)}\]</span></p>
+</section>
+<section >
+<h3>Clustering coefficient</h3>
+<br />
+<p><span class="math">\[K_v = \text{Number of neighbours of $v$} \\
+E_v = \text{Number of links between neighbours of $v$} \\ \\
+\text{Clustering}(\text{network}) = \frac{1}{N} \sum_v \frac{E_v}{\frac{1}{2}  K_v (K_v - 1)}\]</span></p>
+</section>
+<section >
+<h3><div class="sw"> Clustering Coefficient </div></h3>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 0.447572132301196}]}, {"c" : [{"v": "Episode 2"}, {"v": 0.486666666666667}]}, {"c" : [{"v": "Episode 3"}, {"v": 0.498947368421053}]}, {"c" : [{"v": "Episode 4"}, {"v": 0.559808612440191}]}, {"c" : [{"v": "Episode 5"}, {"v": 0.604651162790698}]}, {"c" : [{"v": "Episode 6"}, {"v": 0.656992084432718}]}, {"c" : [{"v": "Episode 7"}, {"v": 0.588387096774194}]}]});
+    var options = {"hAxis":{"title":"Clustering coefficient"},"legend":{"position":"none"},"title":"Clustering coefficient (transitivity)","width":1000,"height":550} 
+    var chart = new google.visualization.BarChart(document.getElementById('c7a96a91-f091-4462-b2fd-2ce7d06df07b'));
+    chart.draw(data, options);
+}
+</script>
+<div id="c7a96a91-f091-4462-b2fd-2ce7d06df07b" style="width: 800px; height: 600px;"></div>
+<aside class="notes">
+How many of your friends in the network are also friends with each other<br/>
+What it means in terms of the story<br/>
+</aside>
+</section>
+<section >
+<h3>Degree</h3>
+<p><img src="images/network-basic.png" alt="Network" /></p>
+</section>
+<section >
+<h3>Degree</h3>
 <p><img src="images/degree1.png" alt="Degree" /></p>
 </section>
 <section >
-<h1>Degree</h1>
+<h3>Degree</h3>
 <p><img src="images/degree2.png" alt="Degree" /></p>
 </section>
 <section >
-<h1>Degree</h1>
+<h3>Degree</h3>
 <br />
 <p><span class="math">\[\text{Degree}(v) = \text{Number of links }v \leftrightarrow v' \\
 v \neq v'\]</span></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <p><img src="images/network-basic.png" alt="Betweenness" /></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <p><img src="images/betweenness1.png" alt="Betweenness" /></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <p><img src="images/betweenness2.png" alt="Betweenness" /></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <p><img src="images/betweenness3.png" alt="Betweenness" /></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <p><img src="images/betweenness4.png" alt="Betweenness" /></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <br />
 <p><span class="math">\[S_v = \text{Number of shortest paths between $a$ and $b$ through $v$} \\
 S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 \text{Betweenness}(v)_{ab} = \frac{S_v}{S}\]</span></p>
 </section>
 <section >
-<h1>Betweenness</h1>
+<h3>Betweenness</h3>
 <br />
 <p><span class="math">\[S_v = \text{Number of shortest paths between $a$ and $b$ through $v$} \\
 S = \text{Number of shortest paths between $a$ and $b$} \\ \\
@@ -413,7 +505,7 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 </pre></td>
 <td class="snippet"><pre class="fssnip"><code lang="R">library(igraph)
 
-centrality &lt;- betweenness(network)
+b &lt;- betweenness(network)
 </code></pre></td></tr></table>
 </section>
 <section data-background="#212d30">
@@ -424,194 +516,17 @@ centrality &lt;- betweenness(network)
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">RProvider</span><span class="o">.</span><span class="i">igraph</span>
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs23', 50)" onmouseover="showTip(event, 'fs23', 50)" class="i">centrality</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">betweenness</span>(<span class="i">network</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 37)" onmouseover="showTip(event, 'fs14', 37)" class="i">b</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">betweenness</span>(<span class="i">network</span>)
 </code></pre></td>
 </tr>
 </table>
 </section>
-<section data-background="#212d30">
-<h1><div class="sw"> Star Wars </div></h1>
-<h1><div class="sw"> Degree and betweenness</div></h1>
-</section>
 <section >
+<h3><div class="sw"> Centrality </div></h3>
+<small>
 <table>
 <tr>
-  <td class="noborder">
-<h2>Original trilogy</h2>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><p>Name</p></th>
-<th><p>Degree</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1.</p></td>
-<td><p>LUKE</p></td>
-<td><p>26</p></td>
-</tr>
-<tr class="even">
-<td><p>2.</p></td>
-<td><p>C-3PO</p></td>
-<td><p>20</p></td>
-</tr>
-<tr class="odd">
-<td><p>3.</p></td>
-<td><p>LEIA</p></td>
-<td><p>19</p></td>
-</tr>
-<tr class="even">
-<td><p>4.</p></td>
-<td><p>HAN</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>5.</p></td>
-<td><p>DARTH VADER</p></td>
-<td><p>16</p></td>
-</tr>
-</tbody>
-</table>
-
-</td>
-  <td class="noborder">
-<h2>Prequels</h2>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><p>Name</p></th>
-<th><p>Degree</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1.</p></td>
-<td><p>ANAKIN</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>2.</p></td>
-<td><p>PADME</p></td>
-<td><p>34</p></td>
-</tr>
-<tr class="odd">
-<td><p>3.</p></td>
-<td><p>OBI-WAN</p></td>
-<td><p>32</p></td>
-</tr>
-<tr class="even">
-<td><p>4.</p></td>
-<td><p>QUI-GON</p></td>
-<td><p>27</p></td>
-</tr>
-<tr class="odd">
-<td><p>5.</p></td>
-<td><p>JAR JAR</p></td>
-<td><p>24</p></td>
-</tr>
-</tbody>
-</table>
-
-<p></td>
-</tr>
-</table></p>
-</section>
-<section >
-<table>
-<tr>
-  <td class="noborder">
-<h2>Original trilogy</h2>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><p>Name</p></th>
-<th><p>Betweenness</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1.</p></td>
-<td><p>LUKE</p></td>
-<td><p>108.6</p></td>
-</tr>
-<tr class="even">
-<td><p>2.</p></td>
-<td><p>C-3PO</p></td>
-<td><p>68.5</p></td>
-</tr>
-<tr class="odd">
-<td><p>3.</p></td>
-<td><p>VADER</p></td>
-<td><p>56.2</p></td>
-</tr>
-<tr class="even">
-<td><p>4.</p></td>
-<td><p>LEIA</p></td>
-<td><p>45.0</p></td>
-</tr>
-<tr class="odd">
-<td><p>5.</p></td>
-<td><p>HAN</p></td>
-<td><p>30.2</p></td>
-</tr>
-</tbody>
-</table>
-
-</td>
-  <td class="noborder">
-<h2>Prequels</h2>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><p>Name</p></th>
-<th><p>Betweenness</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1.</p></td>
-<td><p>OBI-WAN</p></td>
-<td><p>210.4</p></td>
-</tr>
-<tr class="even">
-<td><p>2.</p></td>
-<td><p>PADME</p></td>
-<td><p>209.4</p></td>
-</tr>
-<tr class="odd">
-<td><p>3.</p></td>
-<td><p>QUI-GON</p></td>
-<td><p>140.7</p></td>
-</tr>
-<tr class="even">
-<td><p>4.</p></td>
-<td><p>EMPEROR</p></td>
-<td><p>103.2</p></td>
-</tr>
-<tr class="odd">
-<td><p>5.</p></td>
-<td><p>JAR JAR</p></td>
-<td><p>87.1</p></td>
-</tr>
-</tbody>
-</table>
-
-<p></td>
-</tr>
-</table></p>
-</section>
-<section data-background="images/jarjar-loop3.gif">
-</section>
-<section >
-<h1><div class="sw"> the force awakens </div></h1>
-<table>
-<tr>
-  <td class="noborder">
+  <td class="noborder" style="padding-right: 100px">
 <table>
 <thead>
 <tr class="header">
@@ -651,6 +566,7 @@ centrality &lt;- betweenness(network)
 
 </td>
   <td class="noborder">
+  <div class="fragment">
 <table>
 <thead>
 <tr class="header">
@@ -662,216 +578,56 @@ centrality &lt;- betweenness(network)
 <tbody>
 <tr class="odd">
 <td><p>1.</p></td>
-<td><p>KYLO REN</p></td>
-<td><p>35.5</p></td>
+<td><p>POE</p></td>
+<td><p>97.2</p></td>
 </tr>
 <tr class="even">
 <td><p>2.</p></td>
-<td><p>POE</p></td>
-<td><p>20.3</p></td>
+<td><p>KYLO REN</p></td>
+<td><p>71.9</p></td>
 </tr>
 <tr class="odd">
 <td><p>3.</p></td>
-<td><p>FINN</p></td>
-<td><p>14.0</p></td>
+<td><p>REY</p></td>
+<td><p>38.7</p></td>
 </tr>
 <tr class="even">
 <td><p>4.</p></td>
-<td><p>HAN</p></td>
-<td><p>14.0</p></td>
+<td><p>BB-8</p></td>
+<td><p>29.1</p></td>
 </tr>
 <tr class="odd">
 <td><p>5.</p></td>
-<td><p>REY</p></td>
-<td><p>13.5</p></td>
+<td><p>FINN</p></td>
+<td><p>26.8</p></td>
 </tr>
 </tbody>
 </table>
 
+</div>
 </td>
 </tr>
 </table>
+</small>
 </section>
-<section data-background="images/rey-loop3.gif">
+<section data-background="images/poe_dancing0.gif">
 </section>
-<section data-background="#000000">
-<h1><div class="sw"> who is the most central? </div></h1>
+<section data-background="images/obi-wan-noloop.gif">
 </section>
-<section data-background="images/obi-wan-loop3.gif">
-</section>
-<section data-background="images/c3po-loop3.gif">
+<section data-background="images/darthvader-wins-loop2.gif">
 </section>
 <section >
-<h1>Network structure</h1>
-<p>How do the the movies differ?</p>
-<ul>
-<li>Size</li>
-<li>Density</li>
-<li>Clustering coefficient</li>
-</ul>
-</section>
-<section >
-<h1>Size</h1>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-    google.load("visualization", "1", {packages:["corechart"]})
-    google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 38}]}, {"c" : [{"v": "Episode 2"}, {"v": 33}]}, {"c" : [{"v": "Episode 3"}, {"v": 25}]}, {"c" : [{"v": "Episode 4"}, {"v": 22}]}, {"c" : [{"v": "Episode 5"}, {"v": 21}]}, {"c" : [{"v": "Episode 6"}, {"v": 20}]}, {"c" : [{"v": "Episode 7"}, {"v": 27}]}]});
-    var options = {"colors":["#c43b80"],"hAxis":{"title":"Number of characters","viewWindowMode":"explicit","viewWindow":{"max":40,"min":0}},"legend":{"position":"none"},"title":"Number of characters","width":1000,"height":600} 
-    var chart = new google.visualization.BarChart(document.getElementById('55ec49cf-f2ee-4e40-ad93-2fb5e6943f7b'));
-    chart.draw(data, options);
-}
-</script>
-<div id="55ec49cf-f2ee-4e40-ad93-2fb5e6943f7b" style="width: 1200px; height: 600px"></div>
-</section>
-<section data-background="images/senate.jpeg">
-</section>
-<section >
-<h1>Density</h1>
-<p><img src="images/network-basic.png" alt="Network" /></p>
-</section>
-<section >
-<h1>Density</h1>
-<p><img src="images/full.png" alt="Network" /></p>
-</section>
-<section >
-<h1>Density</h1>
-<br />
-<p><span class="math">\[\begin{align}
-\text{Density} &amp;= \frac{\text{Existing connections}}{\text{Potential connections}} \\
-&amp; \\
-&amp;= \frac{\text{Existing connections}}{\frac{1}{2}N(N-1)}
-\end{align}\]</span></p>
-</section>
-<section >
-<h1><div class="sw"> Density </div></h1>
-<script type="text/javascript">
-    google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 9.60170697012802}]}, {"c" : [{"v": "Episode 2"}, {"v": 9.56439393939394}]}, {"c" : [{"v": "Episode 3"}, {"v": 12.8458498023715}]}, {"c" : [{"v": "Episode 4"}, {"v": 14.2857142857143}]}, {"c" : [{"v": "Episode 5"}, {"v": 13.0952380952381}]}, {"c" : [{"v": "Episode 6"}, {"v": 16.0818713450292}]}, {"c" : [{"v": "Episode 7"}, {"v": 13.1054131054131}]}]});
-    var options = {"colors":["#3bc4c4"],"hAxis":{"title":"Density (%)","viewWindowMode":"explicit","viewWindow":{"max":18,"min":5}},"legend":{"position":"none"},"title":"Network density","width":1000,"height":600} 
-    var chart = new google.visualization.BarChart(document.getElementById('b7f86168-0c86-4bf3-9adc-547c80d64440'));
-    chart.draw(data, options);
-}
-</script>
-<div id="b7f86168-0c86-4bf3-9adc-547c80d64440" style="width: 1200px; height: 600px"></div>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<p><img src="images/network-basic.png" alt="Network" /></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<p><img src="images/clustering1.png" alt="Clustering" /></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<p><img src="images/clustering2.png" alt="Clustering" /></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<p><img src="images/clustering3.png" alt="Clustering" /></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<p><img src="images/clustering4.png" alt="Clustering" /></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<p><img src="images/clustering5.png" alt="Clustering" /></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<br />
-<p><span class="math">\[K_v = \text{Number of neighbours of $v$} \\
-E_v = \text{Number of links between neighbours of $v$} \\ \\
-\text{Clustering}(v) = \frac{E_v}{\frac{1}{2} K_v (K_v - 1)}\]</span></p>
-</section>
-<section >
-<h1>Clustering coefficient</h1>
-<br />
-<p><span class="math">\[K_v = \text{Number of neighbours of $v$} \\
-E_v = \text{Number of links between neighbours of $v$} \\ \\
-\text{Clustering}(\text{network}) = \frac{1}{N} \sum_v \frac{E_v}{\frac{1}{2}  K_v (K_v - 1)}\]</span></p>
-</section>
-<section >
-<h1><div class="sw"> Clustering coefficient </div></h1>
-<script type="text/javascript">
-    google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 0.447572132301196}]}, {"c" : [{"v": "Episode 2"}, {"v": 0.486666666666667}]}, {"c" : [{"v": "Episode 3"}, {"v": 0.498947368421053}]}, {"c" : [{"v": "Episode 4"}, {"v": 0.559808612440191}]}, {"c" : [{"v": "Episode 5"}, {"v": 0.604651162790698}]}, {"c" : [{"v": "Episode 6"}, {"v": 0.656992084432718}]}, {"c" : [{"v": "Episode 7"}, {"v": 0.588387096774194}]}]});
-    var options = {"hAxis":{"title":"Clustering coefficient"},"legend":{"position":"none"},"title":"Clustering coefficient (transitivity)","width":1000,"height":600} 
-    var chart = new google.visualization.BarChart(document.getElementById('a84d0fe6-8cc8-4351-a397-114a1bc9ff0c'));
-    chart.draw(data, options);
-}
-</script>
-<div id="a84d0fe6-8cc8-4351-a397-114a1bc9ff0c" style="width: 1200px; height: 600px"></div>
-</section>
-<section data-background="#212d30">
-<h1>R</h1>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="R">library(igraph) 
-
-density &lt;- graph_density(network)
-clusteringCoef &lt;- transitivity(network, "undirected")
-</code></pre></td></tr></table>
-</section>
-<section data-background="#212d30">
-<h1>F#</h1>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">RProvider</span><span class="o">.</span><span class="i">igraph</span>
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs24', 51)" onmouseover="showTip(event, 'fs24', 51)" class="i">density</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">graph_density</span>(<span class="i">network</span>)
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs25', 52)" onmouseover="showTip(event, 'fs25', 52)" class="i">clusteringCoef</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">transitivity</span>(<span class="i">network</span>, <span class="s">&quot;undirected&quot;</span>)
-</code></pre></td>
-</tr>
-</table>
-<aside class="notes">
-The point is that data science is very polyglot<br/>
-and there's no point in re-implementing algorithms<br/>
-over and over again. Just use your favourite language<br/>
-and call other languages from it!<br/>
-</aside>
-</section>
-<section data-background="#212d30">
-<h1>Google Charts with XPlot</h1>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">XPlot</span><span class="o">.</span><span class="i">GoogleCharts</span>
-
-<span class="i">densities</span>
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs26', 53)" onmouseover="showTip(event, 'fs26', 53)" class="t">Array</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs27', 54)" onmouseover="showTip(event, 'fs27', 54)" class="f">mapi</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs28', 55)" onmouseover="showTip(event, 'fs28', 55)" class="i">i</span> <span onmouseout="hideTip(event, 'fs29', 56)" onmouseover="showTip(event, 'fs29', 56)" class="i">c</span> <span class="k">-&gt;</span> <span class="s">&quot;Episode &quot;</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs15', 57)" onmouseover="showTip(event, 'fs15', 57)" class="f">string</span> (<span onmouseout="hideTip(event, 'fs28', 58)" onmouseover="showTip(event, 'fs28', 58)" class="i">i</span><span class="o">+</span><span class="n">1</span>), <span onmouseout="hideTip(event, 'fs29', 59)" onmouseover="showTip(event, 'fs29', 59)" class="i">c</span> <span class="o">*</span> <span class="n">100.0</span> )
-<span class="o">|&gt;</span> <span class="i">Chart</span><span class="o">.</span><span class="i">Bar</span>
-</code></pre></td>
-</tr>
-</table>
-</section>
-<section >
-<h1>Star Wars network in Neo4j</h1>
+<h3>Star Wars network in Neo4j</h3>
 <p><img src="images/neo4j.png" alt="" /></p>
 </section>
 <section >
-<h1>Network analysis in the real world</h1>
+<h3>Network analysis in the real world</h3>
 <table>
 <tr>
-  <td class="noborder">
-<p><img src="images/fsharp-network.png" alt="F# network" /></p>
-</td>
 <td class="noborder">
-<h2>Central accounts</h2>
+<p><img src="images/fsharp-network.png" alt="F# network" /></p>
+</td><td class="noborder" style="vertical-align: top">
+<p><h2 style="color: #e67e00">@fsharporg</h2></p>
 <ol>
 <li>@dsyme</li>
 <li>@VisualFSharp</li>
@@ -885,12 +641,12 @@ and call other languages from it!<br/>
 </table>
 </section>
 <section >
-<h1>Network analysis in the real world</h1>
+<h3>Network analysis in the real world</h3>
 <p><img src="images/hungarian-factory.png" alt="Real-world network" /></p>
 <font size="5">Source: A. Barabasi - Network Science, 2016.</font>
 </section>
 <section >
-<h1>Network analysis in the real world</h1>
+<h2>Network analysis in the real world</h2>
 <p>Social networks</p>
 <p>Online chat communication</p>
 <p>Email communication</p>
@@ -923,7 +679,7 @@ Why does it make sense - playing with interesting data<br/>
 <td class="noborder">
 <p><img src="images/fsharp.png" alt="F# logo" /></p>
 </td><td class="noborder">
-<h1>Learning more</h1>
+<h3>Learning more</h3>
 <ul>
 <li><p>The F# Foundation <a href="http://www.fsharp.org">www.fsharp.org</a></p></li>
 <li><p>FsLab package <a href="http://www.fslab.org">www.fslab.org</a></p></li>
@@ -934,7 +690,7 @@ Why does it make sense - playing with interesting data<br/>
 </table>
 </section>
 <section >
-<h1>Star Wars resources</h1>
+<h3>Star Wars resources</h3>
 <ul>
 <li><p><a href="http://www.imsdb.com/">Internet Movie Script Database</a></p></li>
 <li><p><a href="https://swapi.co/">swapi : Star Wars API</a></p></li>
@@ -943,24 +699,20 @@ Why does it make sense - playing with interesting data<br/>
 <li><p><a href="http://portal.graphgist.org/graph_gists/855363c7-cdeb-4c8b-b4a5-b72c8f2388e3">Star Wars Neo4j demo</a></p></li>
 </ul>
 </section>
-<section >
-<h1>Thank you!</h1>
-<p><table>
+<section data-background="images/kyloapproves-loop3.gif">
+</section>
+<section data-background="images/kylo.gif">
+<table>
 <tr>
-<td class="noborder"><img src="images/twitter.png" style="width:70px" /></td>
-<td style="vertical-align:middle" class="noborder"> <a href="https://twitter.com/evelgab">@evelgab</a></td>
-</tr>
-<tr>
-<td class="noborder"><img src="images/github.png" style="width:70px" /></td>
-<td class="noborder" style="vertical-align:middle" > <a href="https://github.com/evelinag">github.com/evelinag</a></td>
-</tr>
-<tr>
-<td class="noborder"></td>
-<td class="noborder" style="vertical-align:middle" > <a href="http://evelinag.com">evelinag.com</a></td>
+  <td class="noborder" style="width:50%;"></td>
+   <td class="noborder" style="width:50%;">
+<h2><div class="white">Evelina Gabasova</div></h2>
+<p><div class="white">@evelgab </div><br />
+<div class="white">evelinag.com/star-wars-talk</div><br />
+<div class="white">github.com/evelinag</div>
+</td>
 </tr>
 </table></p>
-</section>
-<section data-background="images/kyloapproves-loop3.gif">
 </section>
 </section>
 
