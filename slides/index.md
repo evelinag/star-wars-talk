@@ -6,47 +6,75 @@
 
 ******************************************************
 
-- data-background : #000000
 
-# The F#orce Awakens
+- data-background : images/kylo.gif
 
-<br/>
+<table>
+<tr>
+  <td class="noborder" style="width:50%;"></td>
+   <td class="noborder" style="width:50%;">
 
-## *Warning*
+## <div class="white">The F#orce Awakens</div>
+## <div class="white">Evelina Gabasova</div>
+<div class="white">@evelgab </div><br /><br />
+<div class="white">*Warning* </div>
+<div class="white">Contains *some* spoilers</div>
+</td> 
+</tr>
+</table>
 
-Contains *some* spoilers for Star Wars, episodes I - VII <br/>
+---
 
---------
+- data-background : images/tcga-dna.jpg
 
-- data-background : images/StarWarsIntro-full-noloop.gif
+' During the day, I do bioinformatics and computational biology,
+' researching mechanisms of early carcinogenesis at Cambridge
+' University - I deal with DNA, genes, proteins etc...
+' It's a very important work, we work on pancreatic cancer which 
+' one of the least understood types of cancer. It's very hard to treat
+' and mortality hasn't improved much over the last 10 years, so it's a big 
+' and important challenge. We use quite a lot of methods, based on 
+' statistics, machine learning and network analysis. 
+' But biology is complex and sometimes it's a bit too much...
 
-' The Galactic Republic is confused. Not only are the Star Wars scripts available just in poorly formatted HTML format, but there are also characters who are important in the films but they do not speak in the scripts at all! The Jedi Council has summoned a young Jedi knight Evelina to help the republic. The F#orce is strong with her but her task is not simple. She has to parse the scripts, extract the Star Wars social network and finally answer the most important question in the galaxy: Why were the prequels crap?
+---
 
-----------
-- data-background : #000000
+- data-background : images/pathways.png
 
-# <div class="sw"> the star wars </div>
-# <div class="sw"> social network</div>
+' do you know the feeling? So because I love working with data, outside
+' of work I like to play with other datasets, datasets that are
+' probably less useful...
 
-' about me
-' what I was trying to do
-' example of several programming tasks & how to solve them
 
-------
+</section>
+<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro.mp4" data-background-color="#000000">
+</section>
+<section data-background-transition="fade" data-background="images/SWLogo.png" data-background-color="#000000">
+
+
+---
+
+![](images/scripts.png)
+
+---
+
+- data-background : #f2a063
 
 ![script structure](images/script-example.png)
 
 ' This structure is highly formalised, names have to be in boldface and centered etc.
 
------
+-------
 
-![imsdb](images/imsdb.png)
+- data-background : white
+
+![](images/network-relations.png)
 
 -----
 
 - data-background : #212d30
 
-# Parsing scripts
+### Parsing scripts
 
     [lang=html]
     <pre>
@@ -65,55 +93,22 @@ Contains *some* spoilers for Star Wars, episodes I - VII <br/>
     ...
     </pre>
 
------
-- data-background : #212d30
-
-# Parsing scripts
-
-    open FSharp.Data
-
-    let url = "http://www.imsdb.com/scripts/Star-Wars-A-New-Hope.html"
-    let episodeHtml = 
-        HtmlDocument.Load(url).Descendants("pre") |> Seq.head
-
-    let boldItems = 
-        episodeHtml.Elements("b") 
-        |> List.map (fun x -> x.InnerText().Trim())
-
------
-- data-background : #212d30
-
-# Parsing scripts
-
-<img src="images/parsing-code-original.png" style="width: 960px" />
+' fsharp data has decent html parser which lets you select all 
+' the elements in bold    
 
 -----
 
-- data-background : #212d30
+- data-background : images/parsing-code-original2.png
 
-# Parsing scripts
+<div style="background-color: rgba(0, 0, 0, 0.9); color: #000000; padding: 20px;">
+  <h1 style="color: #ffffff">Parsing scripts</h3>
+</div>
 
-    [lang=html]
-    <pre>
-    ...
-        <b> INT. MOS EISLEY SPACEPORT - DOCKING BAY 94 </b>
-
-    Chewbacca leads the group into a giant dirt pit that is 
-    Docking Bay 94. Resting in the middle of the huge hole is a 
-    large, round, beat-up, pieced-together hunk of junk that 
-    could only loosely be called a starship.
-
-        <b> LUKE </b>
-    What a piece of junk.
-
-    The tall figure of Han Solo comes down the boarding ramp.
-    ...
-    </pre>
 
 -----
 - data-background : #212d30
 
-# Parsing scripts
+### Parsing scripts
 
     let rec parseScenes sceneAcc characterAcc (items: string list) =
        match items with
@@ -133,7 +128,7 @@ Contains *some* spoilers for Star Wars, episodes I - VII <br/>
 -----
 - data-background : #212d30
 
-# Parsing with active patterns
+### Parsing with active patterns
 
     let (|SceneTitle|Name|Word|) (text:string) =
         let scenePattern = "[ 0-9]*(INT.|EXT.)[ A-Z0-9]"
@@ -145,48 +140,15 @@ Contains *some* spoilers for Star Wars, episodes I - VII <br/>
         else Word
 
 -----
-- data-background : #212d30
+- data-background : #550080
 
 # (| Active patterns |)
 
 hide complexity behind readable code
 
--------
+-----
 
-- data-background : images/trashcompactor-loop3.gif
-
--------
-
-![script structure - ugly](images/script-example2.png)
-
--------
-
-- data-background : images/r2d2beeps-loop3.gif
-
---------
-
-![R2-D2](images/artoo.png)
-
---------
-
-![Chewbacca](images/chewie.png)
-
-
---------
-
-![](  images/equations1.png)
-
---------
-
-![](images/equations2.png)
-
---------
-
-- data-background : images/ewoks-loop3.gif
-
---------
-
-- data-background : images/lonelyluke-loop3.gif
+- data-background : images/itsatrap3.gif
 
 --------
 
@@ -200,11 +162,55 @@ hide complexity behind readable code
 
 - data-background : images/tion-medon-photo.png
 
+-------
+
+- data-background : images/r2d2beeps-loop3.gif
+
 --------
 
-# List of Star Wars characters
+![R2-D2](images/artoo.png)
 
-[swapi.co](https://swapi.co/)
+--------
+
+![Chewbacca](images/chewie.png)
+
+--------
+
+- data-background : #550080
+
+## Number of *common* mentions
+
+# ⬇
+
+## Number of interactions
+
+--------
+
+![](  images/equations1.png)
+
+--------
+
+![](images/equations2.png)
+
+--------
+
+- data-background : images/ewoks.gif
+
+--------
+
+- data-background : images/lonely-luke.gif
+
+--------
+
+- data-background : #000000
+
+### Theorem: 
+
+# There's an API for everything.
+
+### Proof: 
+
+### [swapi.co](https://swapi.co/)
 
 ----------
 
@@ -224,33 +230,82 @@ hide complexity behind readable code
 
 ----------
 
-- data-background : images/darthvader-nope-loop3.gif
-
-----------
-
 - data-background : images/csharp-swapi.gif
 
 ----------
 
 - data-background : #000000
 
-# <div class="sw">fsharp-swapi</div>
+![swapi-langs](images/swapi-now.png)
+
+----------
+
+- data-background : #000000
+
+### <div class="sw">fsharp-swapi</div>
 
 [github.com/evelinag/fsharp-swapi](https://github.com/evelinag/fsharp-swapi)
 
 [swapi.co](https://swapi.co/documentation)
 
+---
+
+- data-background : #000000
+
+### <div class="sw">scenes</div>
+# + 
+### <div class="sw">characters</div>
+
+----------
+![](images/film_analysis.png)
+
+---
+
+<img src="images/disney_analysis.png" style="width: 1200px" />
+
+---
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 79.4117647058823}]}, {"c" : [{"v": "Episode 2"}, {"v": 78.968253968254}]}, {"c" : [{"v": "Episode 3"}, {"v": 81.7901234567901}]}, {"c" : [{"v": "Episode 4"}, {"v": 83.7310195227766}]}, {"c" : [{"v": "Episode 5"}, {"v": 79.9472295514512}]}, {"c" : [{"v": "Episode 6"}, {"v": 78.6516853932584}]}, {"c" : [{"v": "Episode 7"}, {"v": 68.4210526315789}]}]});
+    var options = {"hAxis":{"title":"Percentage of male characters (%)","viewWindowMode":"explicit","viewWindow":{"max":100,"min":0}},"legend":{"position":"none"},"title":"Ratio of male characters","width":1000,"height":550} 
+    var chart = new google.visualization.BarChart(document.getElementById('82c61e2a-02a3-497e-92e2-0d339641687c'));
+    chart.draw(data, options);
+}
+</script>
+<div id="82c61e2a-02a3-497e-92e2-0d339641687c" style="width: 800px; height: 600px;"></div>
+
+---
+
+- data-background : images/rey_bb8-loop2.gif
 
 ----------
 
 # <div class="sw">visualization</div>
-
 
 ----------
 
 ![](images/d3js.png)
 
 ' Exporting and importing the network with Json?
+' Because F# works very well with JSON, maybe I can just use something that will read the JSON 
+
+----------
+
+![](images/fable.png)
+
+----------
+
+![](images/fable-logo.png)
+![](images/fable-samples1.png)
+
+----------
+
+![](images/fable-logo.png)
+![](images/fable-samples2.png)
 
 ----------
 
@@ -260,47 +315,161 @@ hide complexity behind readable code
 
 ----------
 
-# <div class="sw">the phantom menace</div>
+### <div class="sw">the phantom menace</div>
 
 <a href="images/networks/episode1-interactions.html"><img src="images/networks/episode1.png" style="height:600px"/> </a>
 
 
 ----------
 
-# <div class="sw">a new hope</div>
+### <div class="sw">a new hope</div>
 
 <a href="images/networks/episode4-interactions.html"><img src="images/networks/episode4.png" style="height:600px"/> </a>
 
 
 ----------
 
-# <div class="sw">the force awakens</div>
+### <div class="sw">the force awakens</div>
 
 <a href="images/networks/episode7-interactions.html"><img src="images/networks/episode7_network.png" style="height:600px"/> </a>
 
-----------
+-----
 
-# <div class="sw">network analysis</div>
+# Network structure
 
-Who is the most central character?
-
-- Degree
-- Betweenness
+How do the the movies differ?
 
 -----
-# Degree
+
+### <div class="sw"> Size </div>
+
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 38}]}, {"c" : [{"v": "Episode 2"}, {"v": 33}]}, {"c" : [{"v": "Episode 3"}, {"v": 25}]}, {"c" : [{"v": "Episode 4"}, {"v": 22}]}, {"c" : [{"v": "Episode 5"}, {"v": 21}]}, {"c" : [{"v": "Episode 6"}, {"v": 20}]}, {"c" : [{"v": "Episode 7"}, {"v": 27}]}]});
+    var options = {"colors":["#3bc4c4"],"hAxis":{"title":"Number of characters","viewWindowMode":"explicit","viewWindow":{"max":40,"min":0}},"legend":{"position":"none"},"title":"Number of characters","width":1000,"height":550} 
+    var chart = new google.visualization.BarChart(document.getElementById('793fedd1-18b7-4674-bbd9-333211512707'));
+    chart.draw(data, options);
+}
+</script>
+<div id="793fedd1-18b7-4674-bbd9-333211512707" style="width: 800px; height: 600px;"></div>
+
+-----
+
+### Density
 ![Network](images/network-basic.png)
 
 -----
-# Degree
+### Density
+![Network](images/full.png)
+
+-----
+### Density
+
+<br />
+
+$$$
+\begin{align}
+\text{Density} &= \frac{\text{Existing connections}}{\text{Potential connections}} \\
+& \\
+&= \frac{\text{Existing connections}}{\frac{1}{2}N(N-1)}
+\end{align}
+
+-----
+
+### <div class="sw"> Density </div>
+
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 19.203413940256}]}, {"c" : [{"v": "Episode 2"}, {"v": 19.1287878787879}]}, {"c" : [{"v": "Episode 3"}, {"v": 25.296442687747}]}, {"c" : [{"v": "Episode 4"}, {"v": 28.5714285714286}]}, {"c" : [{"v": "Episode 5"}, {"v": 26.1904761904762}]}, {"c" : [{"v": "Episode 6"}, {"v": 31.5789473684211}]}, {"c" : [{"v": "Episode 7"}, {"v": 26.2108262108262}]}]});
+    var options = {"colors":["#c43b80"],"hAxis":{"title":"Density (%)","viewWindowMode":"explicit","viewWindow":{"max":35,"min":15}},"legend":{"position":"none"},"title":"Network density","width":1000,"height":550}
+    var chart = new google.visualization.BarChart(document.getElementById('526513e7-b223-41f2-8ba0-0008433196f8'));
+    chart.draw(data, options);
+}
+</script>
+<div id="526513e7-b223-41f2-8ba0-0008433196f8" style="width: 800px; height: 600px;"></div>
+
+-----
+### Clustering coefficient
+![Network](images/network-basic.png)
+
+-----
+### Clustering coefficient
+![Clustering](images/clustering1.png)
+
+-----
+### Clustering coefficient
+![Clustering](images/clustering2.png)
+
+-----
+### Clustering coefficient
+![Clustering](images/clustering3.png)
+
+-----
+### Clustering coefficient
+![Clustering](images/clustering4.png)
+
+-----
+### Clustering coefficient
+![Clustering](images/clustering5.png)
+
+-----
+### Clustering coefficient
+
+<br />
+
+$$$
+K_v = \text{Number of neighbours of $v$} \\
+E_v = \text{Number of links between neighbours of $v$} \\ \\
+\text{Clustering}(v) = \frac{E_v}{\frac{1}{2} K_v (K_v - 1)}
+
+-----
+### Clustering coefficient
+
+<br />
+
+$$$
+K_v = \text{Number of neighbours of $v$} \\
+E_v = \text{Number of links between neighbours of $v$} \\ \\
+\text{Clustering}(\text{network}) = \frac{1}{N} \sum_v \frac{E_v}{\frac{1}{2}  K_v (K_v - 1)}
+
+--------
+
+### <div class="sw"> Clustering Coefficient </div>
+
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]})
+    google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 0.447572132301196}]}, {"c" : [{"v": "Episode 2"}, {"v": 0.486666666666667}]}, {"c" : [{"v": "Episode 3"}, {"v": 0.498947368421053}]}, {"c" : [{"v": "Episode 4"}, {"v": 0.559808612440191}]}, {"c" : [{"v": "Episode 5"}, {"v": 0.604651162790698}]}, {"c" : [{"v": "Episode 6"}, {"v": 0.656992084432718}]}, {"c" : [{"v": "Episode 7"}, {"v": 0.588387096774194}]}]});
+    var options = {"hAxis":{"title":"Clustering coefficient"},"legend":{"position":"none"},"title":"Clustering coefficient (transitivity)","width":1000,"height":550} 
+    var chart = new google.visualization.BarChart(document.getElementById('c7a96a91-f091-4462-b2fd-2ce7d06df07b'));
+    chart.draw(data, options);
+}
+</script>
+<div id="c7a96a91-f091-4462-b2fd-2ce7d06df07b" style="width: 800px; height: 600px;"></div>
+
+' How many of your friends in the network are also friends with each other
+' What it means in terms of the story
+
+
+-----
+### Degree
+![Network](images/network-basic.png)
+
+-----
+### Degree
 ![Degree](images/degree1.png)
 
 -----
-# Degree
+### Degree
 ![Degree](images/degree2.png)
 
 ------
-# Degree
+### Degree
 
 <br />
 
@@ -309,29 +478,28 @@ $$$
 v \neq v'
 
 
-
 -----
-# Betweenness
+### Betweenness
 ![Betweenness](images/network-basic.png)
 
 -----
-# Betweenness
+### Betweenness
 ![Betweenness](images/betweenness1.png)
 
 -----
-# Betweenness
+### Betweenness
 ![Betweenness](images/betweenness2.png)
 
 -----
-# Betweenness
+### Betweenness
 ![Betweenness](images/betweenness3.png)
 
 -----
-# Betweenness
+### Betweenness
 ![Betweenness](images/betweenness4.png)
 
 -----
-# Betweenness
+### Betweenness
 
 <br />
 
@@ -341,7 +509,7 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 \text{Betweenness}(v)_{ab} = \frac{S_v}{S}
 
 -----
-# Betweenness
+### Betweenness
 
 <br />
 
@@ -358,7 +526,7 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
     [lang=R]
     library(igraph)
 
-    centrality <- betweenness(network)
+    b <- betweenness(network)
 
 
 -----
@@ -368,92 +536,16 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 
     open RProvider.igraph
 
-    let centrality = R.betweenness(network)
+    let b = R.betweenness(network)
 
+---
 
------
-- data-background : #212d30
+### <div class="sw"> Centrality </div>
 
-# <div class="sw"> Star Wars </div>
-# <div class="sw"> Degree and betweenness</div>
-
------
-
+<small>
 <table>
 <tr>
-  <td class="noborder">
-
-## Original trilogy
-
-| | Name | Degree |
-|---|-----|-----|
-| 1. | LUKE | 26 |
-| 2. | C-3PO | 20 |
-| 3. | LEIA | 19 |
-| 4. | HAN | 16 |
-| 5. | DARTH VADER | 16 |
-
-</td>
-  <td class="noborder">
-
-## Prequels 
-
-| | Name | Degree |
-|---|-----|-----|
-| 1. | ANAKIN | 40 |
-| 2. | PADME | 34 |
-| 3. | OBI-WAN | 32 |
-| 4. | QUI-GON | 27 |
-| 5. | JAR JAR | 24 |
-
-  </td>
-  </tr>
-</table>
-
------
-
-<table>
-<tr>
-  <td class="noborder">
-
-## Original trilogy
-
-| | Name | Betweenness |
-|---|-----|-----|
-1. | LUKE | 108.6 |
-2. | C-3PO | 68.5 |
-3. | VADER | 56.2 |
-4. | LEIA | 45.0 |
-5. | HAN | 30.2 |
-
-</td>
-  <td class="noborder">
-
-## Prequels 
-
-| | Name | Betweenness |
-|---|-----|-----|
-1. | OBI-WAN | 210.4 |
-2. | PADME | 209.4 |
-3. | QUI-GON | 140.7 |
-4. | EMPEROR | 103.2 |
-5. | JAR JAR | 87.1 |
-
-  </td>
-  </tr>
-</table>
-
------
-
-- data-background : images/jarjar-loop3.gif
-
-------
-
-# <div class="sw"> the force awakens </div>
-
-<table>
-<tr>
-  <td class="noborder">
+  <td class="noborder" style="padding-right: 100px">
 
 | | Name | Degree |
 |---|-----|-----|
@@ -465,220 +557,54 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 
 </td>
   <td class="noborder">
+  <div class="fragment">
 
 | | Name | Betweenness |
 |---|-----|-----|
-1. | KYLO REN | 35.5 |
-2. | POE | 20.3 |
-3. | FINN | 14.0 |
-4. | HAN | 14.0 |
-5. | REY | 13.5 |
+1. | POE | 97.2 |
+2. | KYLO REN | 71.9 |
+3. | REY | 38.7 |
+4. | BB-8 | 29.1 |
+5. | FINN | 26.8 |
 
+</div>
 </td>
 </tr>
 </table>
+</small>
 
------
+---
 
-- data-background : images/rey-loop3.gif
+- data-background : images/poe_dancing0.gif
 
-------
+---
 
-- data-background : #000000
+- data-background : images/obi-wan-noloop.gif
 
-# <div class="sw"> who is the most central? </div>
+---
 
-------
-
-- data-background : images/obi-wan-loop3.gif
-
------
-
-- data-background : images/c3po-loop3.gif
-
-
------
-# Network structure
-
-How do the the movies differ?
-
-- Size
-- Density
-- Clustering coefficient
-
------
-# Size
-
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-    google.load("visualization", "1", {packages:["corechart"]})
-    google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 38}]}, {"c" : [{"v": "Episode 2"}, {"v": 33}]}, {"c" : [{"v": "Episode 3"}, {"v": 25}]}, {"c" : [{"v": "Episode 4"}, {"v": 22}]}, {"c" : [{"v": "Episode 5"}, {"v": 21}]}, {"c" : [{"v": "Episode 6"}, {"v": 20}]}, {"c" : [{"v": "Episode 7"}, {"v": 27}]}]});
-    var options = {"colors":["#c43b80"],"hAxis":{"title":"Number of characters","viewWindowMode":"explicit","viewWindow":{"max":40,"min":0}},"legend":{"position":"none"},"title":"Number of characters","width":1000,"height":600} 
-    var chart = new google.visualization.BarChart(document.getElementById('55ec49cf-f2ee-4e40-ad93-2fb5e6943f7b'));
-    chart.draw(data, options);
-}
-</script>
-<div id="55ec49cf-f2ee-4e40-ad93-2fb5e6943f7b" style="width: 1200px; height: 600px"></div>
-
------
-- data-background : images/senate.jpeg
-
------
-# Density
-![Network](images/network-basic.png)
-
------
-# Density
-![Network](images/full.png)
-
------
-# Density
-
-<br />
-
-$$$
-\begin{align}
-\text{Density} &= \frac{\text{Existing connections}}{\text{Potential connections}} \\
-& \\
-&= \frac{\text{Existing connections}}{\frac{1}{2}N(N-1)}
-\end{align}
-
-
-
------
-# <div class="sw"> Density </div>
-
-<script type="text/javascript">
-    google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 9.60170697012802}]}, {"c" : [{"v": "Episode 2"}, {"v": 9.56439393939394}]}, {"c" : [{"v": "Episode 3"}, {"v": 12.8458498023715}]}, {"c" : [{"v": "Episode 4"}, {"v": 14.2857142857143}]}, {"c" : [{"v": "Episode 5"}, {"v": 13.0952380952381}]}, {"c" : [{"v": "Episode 6"}, {"v": 16.0818713450292}]}, {"c" : [{"v": "Episode 7"}, {"v": 13.1054131054131}]}]});
-    var options = {"colors":["#3bc4c4"],"hAxis":{"title":"Density (%)","viewWindowMode":"explicit","viewWindow":{"max":18,"min":5}},"legend":{"position":"none"},"title":"Network density","width":1000,"height":600} 
-    var chart = new google.visualization.BarChart(document.getElementById('b7f86168-0c86-4bf3-9adc-547c80d64440'));
-    chart.draw(data, options);
-}
-</script>
-<div id="b7f86168-0c86-4bf3-9adc-547c80d64440" style="width: 1200px; height: 600px"></div>
-
------
-# Clustering coefficient
-![Network](images/network-basic.png)
-
------
-# Clustering coefficient
-![Clustering](images/clustering1.png)
-
------
-# Clustering coefficient
-![Clustering](images/clustering2.png)
-
------
-# Clustering coefficient
-![Clustering](images/clustering3.png)
-
------
-# Clustering coefficient
-![Clustering](images/clustering4.png)
-
------
-# Clustering coefficient
-![Clustering](images/clustering5.png)
-
------
-# Clustering coefficient
-
-<br />
-
-$$$
-K_v = \text{Number of neighbours of $v$} \\
-E_v = \text{Number of links between neighbours of $v$} \\ \\
-\text{Clustering}(v) = \frac{E_v}{\frac{1}{2} K_v (K_v - 1)}
-
------
-# Clustering coefficient
-
-<br />
-
-$$$
-K_v = \text{Number of neighbours of $v$} \\
-E_v = \text{Number of links between neighbours of $v$} \\ \\
-\text{Clustering}(\text{network}) = \frac{1}{N} \sum_v \frac{E_v}{\frac{1}{2}  K_v (K_v - 1)}
-
------
-
-# <div class="sw"> Clustering coefficient </div>
-
-<script type="text/javascript">
-    google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": "Episode 1"}, {"v": 0.447572132301196}]}, {"c" : [{"v": "Episode 2"}, {"v": 0.486666666666667}]}, {"c" : [{"v": "Episode 3"}, {"v": 0.498947368421053}]}, {"c" : [{"v": "Episode 4"}, {"v": 0.559808612440191}]}, {"c" : [{"v": "Episode 5"}, {"v": 0.604651162790698}]}, {"c" : [{"v": "Episode 6"}, {"v": 0.656992084432718}]}, {"c" : [{"v": "Episode 7"}, {"v": 0.588387096774194}]}]});
-    var options = {"hAxis":{"title":"Clustering coefficient"},"legend":{"position":"none"},"title":"Clustering coefficient (transitivity)","width":1000,"height":600} 
-    var chart = new google.visualization.BarChart(document.getElementById('a84d0fe6-8cc8-4351-a397-114a1bc9ff0c'));
-    chart.draw(data, options);
-}
-</script>
-<div id="a84d0fe6-8cc8-4351-a397-114a1bc9ff0c" style="width: 1200px; height: 600px"></div>
-
-
------
-- data-background : #212d30
-
-# R
-
-    [lang=R]
-    library(igraph) 
-
-    density <- graph_density(network)
-    clusteringCoef <- transitivity(network, "undirected")
-
-
------
-- data-background : #212d30
-
-# F#
-
-    open RProvider.igraph
-
-    let density = R.graph_density(network)
-    let clusteringCoef = R.transitivity(network, "undirected")
-        
-
-' The point is that data science is very polyglot
-' and there's no point in re-implementing algorithms
-' over and over again. Just use your favourite language
-' and call other languages from it!
-
-----------
-- data-background : #212d30
-
-# Google Charts with XPlot
-
-    open XPlot.GoogleCharts
-
-    densities
-    |> Array.mapi (fun i c -> "Episode " + string (i+1), c * 100.0 )
-    |> Chart.Bar
+- data-background : images/darthvader-wins-loop2.gif
 
 ----------
 
-# Star Wars network in Neo4j
+### Star Wars network in Neo4j
 
 ![](images/neo4j.png)
 
 ----------
-# Network analysis in the real world
+
+
+### Network analysis in the real world
 
 <table>
 <tr>
-  <td class="noborder">
+<td class="noborder">
 
 ![F# network](images/fsharp-network.png)
 
-</td>
-<td class="noborder">
+</td><td class="noborder" style="vertical-align: top">
 
-## Central accounts
+<h2 style="color: #e67e00">@fsharporg</h2>
 
 1. @dsyme
 2. @VisualFSharp
@@ -686,21 +612,21 @@ function drawChart() {
 4. @tomaspetricek
 5. @c4fsharp 
 
-<font size="5">November 2014</font>
 
+<font size="5">November 2014</font>
 </td>
 </tr>
 </table>
 
 -----
-# Network analysis in the real world
+### Network analysis in the real world
 
 ![Real-world network](images/hungarian-factory.png)
 
 <font size="5">Source: A. Barabasi - Network Science, 2016.</font>
 
 -----
-# Network analysis in the real world
+## Network analysis in the real world
 
 Social networks
 
@@ -750,7 +676,7 @@ Having fun with interesting data
 
 </td><td class="noborder">
 
-# Learning more 
+### Learning more 
 
  - The F# Foundation [www.fsharp.org](http://www.fsharp.org)
 
@@ -764,7 +690,7 @@ Having fun with interesting data
 
 ----------
 
-# Star Wars resources
+### Star Wars resources
 
 - [Internet Movie Script Database](http://www.imsdb.com/)
 
@@ -778,23 +704,21 @@ Having fun with interesting data
 
 ----------
 
-# Thank you!
+- data-background : images/kyloapproves-loop3.gif
+
+-----
+
+- data-background : images/kylo.gif
 
 <table>
 <tr>
-  <td class="noborder"><img src="images/twitter.png" style="width:70px" /></td>
-  <td style="vertical-align:middle" class="noborder"> [@evelgab](https://twitter.com/evelgab)</td>
-</tr>
-<tr>
-  <td class="noborder"><img src="images/github.png" style="width:70px" /></td>
-  <td class="noborder" style="vertical-align:middle" > [github.com/evelinag](https://github.com/evelinag)</td>
-</tr>
-<tr>
-  <td class="noborder"></td>
-  <td class="noborder" style="vertical-align:middle" > [evelinag.com](http://evelinag.com)</td>
+  <td class="noborder" style="width:50%;"></td>
+   <td class="noborder" style="width:50%;">
+
+## <div class="white">Evelina Gabasova</div>
+<div class="white">@evelgab </div><br />
+<div class="white">evelinag.com</div><br />
+<div class="white">github.com/evelinag</div>
+</td> 
 </tr>
 </table>
-
---------
-
-- data-background : images/kyloapproves-loop3.gif
