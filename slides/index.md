@@ -261,7 +261,7 @@ hide complexity behind readable code
 
 ---
 
-<img src="images/disney_analysis.png" style="width: 1200px" />
+<img src="images/gender-analysis.png" style="width: 1200px" />
 
 ---
 
@@ -712,8 +712,8 @@ Having fun with interesting data
 
 <table>
 <tr>
-  <td class="noborder" style="width:50%;"></td>
-   <td class="noborder" style="width:50%;">
+  <td class="noborder" style="width:40%;"></td>
+   <td class="noborder" style="width:60%;">
 
 ## <div class="white">Evelina Gabasova</div>
 <div class="white">@evelgab </div><br />
