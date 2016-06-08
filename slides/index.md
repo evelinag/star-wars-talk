@@ -717,7 +717,7 @@ Having fun with interesting data
 
 ## <div class="white">Evelina Gabasova</div>
 <div class="white">@evelgab </div><br />
-<div class="white">evelinag.com</div><br />
+<div class="white">evelinag.com/star-wars-talk</div><br />
 <div class="white">github.com/evelinag</div>
 </td> 
 </tr>
