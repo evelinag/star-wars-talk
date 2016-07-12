@@ -47,7 +47,7 @@
 
 
 </section>
-<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro-QCon.mp4" data-background-color="#000000">
+<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro.mp4" data-background-color="#000000">
 </section>
 <section data-background-transition="fade" data-background="images/SWLogo.png" data-background-color="#000000">
 
