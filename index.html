@@ -46,20 +46,26 @@
 </head>
 <body>
     <div class="reveal">
-        <div class="tip" id="fs1">val parseScenes : sceneAcc:&#39;a list -&gt; characterAcc:&#39;b -&gt; items:string list -&gt; &#39;a list<br /><br />Full name: index.parseScenes</div>
-<div class="tip" id="fs2">val sceneAcc : &#39;a list</div>
-<div class="tip" id="fs3">val characterAcc : &#39;b</div>
-<div class="tip" id="fs4">val items : string list</div>
-<div class="tip" id="fs5">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = System.String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
-<div class="tip" id="fs6">type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
-<div class="tip" id="fs7">val item : string</div>
-<div class="tip" id="fs8">val rest : string list</div>
-<div class="tip" id="fs9">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member GetSlice : startIndex:int option * endIndex:int option -&gt; &#39;T list<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
-<div class="tip" id="fs10">val rev : list:&#39;T list -&gt; &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List.rev</div>
-<div class="tip" id="fs11">val text : string</div>
-<div class="tip" id="fs12">val scenePattern : string</div>
-<div class="tip" id="fs13">val namePattern : string</div>
-<div class="tip" id="fs14">val b : obj<br /><br />Full name: index.b</div>
+        <div class="tip" id="fs1">val text : string</div>
+<div class="tip" id="fs2">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = System.String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
+<div class="tip" id="fs3">val scenePattern : string</div>
+<div class="tip" id="fs4">val namePattern : string</div>
+<div class="tip" id="fs5">val parseScenes : sceneAcc:string list list -&gt; characterAcc:string list -&gt; items:string list -&gt; string list list<br /><br />Full name: index.parseScenes</div>
+<div class="tip" id="fs6">val sceneAcc : string list list</div>
+<div class="tip" id="fs7">val characterAcc : string list</div>
+<div class="tip" id="fs8">val items : string list</div>
+<div class="tip" id="fs9">type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
+<div class="tip" id="fs10">val item : string</div>
+<div class="tip" id="fs11">val rest : string list</div>
+<div class="tip" id="fs12">active recognizer SceneTitle: string -&gt; Choice&lt;string,string,unit&gt;<br /><br />Full name: index.( |SceneTitle|Name|Word| )</div>
+<div class="tip" id="fs13">val title : string</div>
+<div class="tip" id="fs14">val fullScene : string list</div>
+<div class="tip" id="fs15">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IReadOnlyCollection&lt;&#39;T&gt;<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member GetSlice : startIndex:int option * endIndex:int option -&gt; &#39;T list<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
+<div class="tip" id="fs16">val rev : list:&#39;T list -&gt; &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List.rev</div>
+<div class="tip" id="fs17">active recognizer Name: string -&gt; Choice&lt;string,string,unit&gt;<br /><br />Full name: index.( |SceneTitle|Name|Word| )</div>
+<div class="tip" id="fs18">val name : string</div>
+<div class="tip" id="fs19">active recognizer Word: string -&gt; Choice&lt;string,string,unit&gt;<br /><br />Full name: index.( |SceneTitle|Name|Word| )</div>
+<div class="tip" id="fs20">val b : obj<br /><br />Full name: index.b</div>
 
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
@@ -79,26 +85,15 @@
 </table></p>
 </section>
 <section data-background="images/tcga-dna.jpg">
-<aside class="notes">
-During the day, I do bioinformatics and computational biology,<br/>
-researching mechanisms of early carcinogenesis at Cambridge<br/>
-University - I deal with DNA, genes, proteins etc...<br/>
-It's a very important work, we work on pancreatic cancer which <br/>
-one of the least understood types of cancer. It's very hard to treat<br/>
-and mortality hasn't improved much over the last 10 years, so it's a big <br/>
-and important challenge. We use quite a lot of methods, based on <br/>
-statistics, machine learning and network analysis. <br/>
-But biology is complex and sometimes it's a bit too much...<br/>
-</aside>
 </section>
-<section data-background="images/pathways.png">
+<section data-background="images/bam.png">
 <aside class="notes">
 do you know the feeling? So because I love working with data, outside<br/>
 of work I like to play with other datasets, datasets that are<br/>
 probably less useful...<br/>
 </aside>
 </section>
-<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro.mp4" data-background-color="#000000">
+<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro-ncrafts-wide.mp4" data-background-color="#000000">
 </section>
 <section data-background-transition="fade" data-background="images/SWLogo.png" data-background-color="#000000">
 </section>
@@ -159,7 +154,30 @@ the elements in bold    <br/>
 </div>
 </section>
 <section data-background="#212d30">
-<h3>Parsing scripts</h3>
+<h3>Parsing with active patterns</h3>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+<span class="l">8: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> (|<span class="p">SceneTitle</span>|<span class="p">Name</span>|<span class="p">Word</span>|) (<span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">text</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="t">string</span>) <span class="o">=</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">scenePattern</span> <span class="o">=</span> <span class="s">&quot;[ 0-9]*(INT.|EXT.)[ A-Z0-9]&quot;</span>
+    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">namePattern</span> <span class="o">=</span> <span class="s">&quot;^[/A-Z0-9]+[-]*[/A-Z0-9 ]*[-]*[/A-Z0-9 ]+$&quot;</span>
+    <span class="k">if</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs3', 6)" onmouseover="showTip(event, 'fs3', 6)" class="i">scenePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
+        <span class="p">SceneTitle</span> <span onmouseout="hideTip(event, 'fs1', 7)" onmouseover="showTip(event, 'fs1', 7)" class="i">text</span>
+    <span class="k">elif</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs4', 9)" onmouseover="showTip(event, 'fs4', 9)" class="i">namePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
+        <span class="p">Name</span> <span onmouseout="hideTip(event, 'fs1', 10)" onmouseover="showTip(event, 'fs1', 10)" class="i">text</span>
+    <span class="k">else</span> <span class="p">Word</span>
+</code></pre></td>
+</tr>
+</table>
+</section>
+<section data-background="#212d30">
+<h3>Parsing scripts with pattern matching</h3>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
@@ -175,43 +193,20 @@ the elements in bold    <br/>
 <span class="l">13: </span>
 <span class="l">14: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="f">parseScenes</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">characterAcc</span> (<span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">items</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="t">string</span> <span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="t">list</span>) <span class="o">=</span>
-   <span class="k">match</span> <span onmouseout="hideTip(event, 'fs4', 7)" onmouseover="showTip(event, 'fs4', 7)" class="i">items</span> <span class="k">with</span>
-   | <span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">item</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">rest</span> <span class="k">-&gt;</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="k">rec</span> <span onmouseout="hideTip(event, 'fs5', 11)" onmouseover="showTip(event, 'fs5', 11)" class="f">parseScenes</span> <span onmouseout="hideTip(event, 'fs6', 12)" onmouseover="showTip(event, 'fs6', 12)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs7', 13)" onmouseover="showTip(event, 'fs7', 13)" class="i">characterAcc</span> (<span onmouseout="hideTip(event, 'fs8', 14)" onmouseover="showTip(event, 'fs8', 14)" class="i">items</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs2', 15)" onmouseover="showTip(event, 'fs2', 15)" class="t">string</span> <span onmouseout="hideTip(event, 'fs9', 16)" onmouseover="showTip(event, 'fs9', 16)" class="t">list</span>) <span class="o">=</span>
+   <span class="k">match</span> <span onmouseout="hideTip(event, 'fs8', 17)" onmouseover="showTip(event, 'fs8', 17)" class="i">items</span> <span class="k">with</span>
+   | <span onmouseout="hideTip(event, 'fs10', 18)" onmouseover="showTip(event, 'fs10', 18)" class="i">item</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs11', 19)" onmouseover="showTip(event, 'fs11', 19)" class="i">rest</span> <span class="k">-&gt;</span>
        <span class="k">match</span> <span class="i">item</span> <span class="k">with</span>
-       | <span class="i">SceneTitle</span> <span class="i">title</span> <span class="k">-&gt;</span> 
+       | <span onmouseout="hideTip(event, 'fs12', 20)" onmouseover="showTip(event, 'fs12', 20)" class="p">SceneTitle</span> <span onmouseout="hideTip(event, 'fs13', 21)" onmouseover="showTip(event, 'fs13', 21)" class="i">title</span> <span class="k">-&gt;</span> 
             <span class="c">// add the finished scene to the scene accumulator</span>
-            <span class="k">let</span> <span class="i">fullScene</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">rev</span> <span onmouseout="hideTip(event, 'fs3', 12)" onmouseover="showTip(event, 'fs3', 12)" class="i">characterAcc</span>
-            <span onmouseout="hideTip(event, 'fs1', 13)" onmouseover="showTip(event, 'fs1', 13)" class="i">parseScenes</span> (<span class="i">fullScene</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="i">sceneAcc</span>) [] <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="i">rest</span>
-       | <span class="i">Name</span> <span class="i">name</span> <span class="k">-&gt;</span> 
+            <span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 22)" onmouseover="showTip(event, 'fs14', 22)" class="i">fullScene</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs15', 23)" onmouseover="showTip(event, 'fs15', 23)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 24)" onmouseover="showTip(event, 'fs16', 24)" class="f">rev</span> <span onmouseout="hideTip(event, 'fs7', 25)" onmouseover="showTip(event, 'fs7', 25)" class="i">characterAcc</span>
+            <span onmouseout="hideTip(event, 'fs5', 26)" onmouseover="showTip(event, 'fs5', 26)" class="f">parseScenes</span> (<span onmouseout="hideTip(event, 'fs14', 27)" onmouseover="showTip(event, 'fs14', 27)" class="i">fullScene</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs6', 28)" onmouseover="showTip(event, 'fs6', 28)" class="i">sceneAcc</span>) [] <span onmouseout="hideTip(event, 'fs11', 29)" onmouseover="showTip(event, 'fs11', 29)" class="i">rest</span>
+       | <span onmouseout="hideTip(event, 'fs17', 30)" onmouseover="showTip(event, 'fs17', 30)" class="p">Name</span> <span onmouseout="hideTip(event, 'fs18', 31)" onmouseover="showTip(event, 'fs18', 31)" class="i">name</span> <span class="k">-&gt;</span> 
             <span class="c">// add character&#39;s name to the character accumulator</span>
-            <span onmouseout="hideTip(event, 'fs1', 16)" onmouseover="showTip(event, 'fs1', 16)" class="i">parseScenes</span> <span onmouseout="hideTip(event, 'fs2', 17)" onmouseover="showTip(event, 'fs2', 17)" class="i">sceneAcc</span> (<span class="i">name</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs3', 18)" onmouseover="showTip(event, 'fs3', 18)" class="i">characterAcc</span>) <span onmouseout="hideTip(event, 'fs8', 19)" onmouseover="showTip(event, 'fs8', 19)" class="i">rest</span>
-       | <span class="i">Word</span> <span class="k">-&gt;</span> <span class="c">// do nothing</span>
-            <span onmouseout="hideTip(event, 'fs1', 20)" onmouseover="showTip(event, 'fs1', 20)" class="i">parseScenes</span> <span onmouseout="hideTip(event, 'fs2', 21)" onmouseover="showTip(event, 'fs2', 21)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs3', 22)" onmouseover="showTip(event, 'fs3', 22)" class="i">characterAcc</span> <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="i">rest</span>
-   | [] <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs9', 24)" onmouseover="showTip(event, 'fs9', 24)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 25)" onmouseover="showTip(event, 'fs10', 25)" class="f">rev</span> <span onmouseout="hideTip(event, 'fs2', 26)" onmouseover="showTip(event, 'fs2', 26)" class="i">sceneAcc</span>     
-</code></pre></td>
-</tr>
-</table>
-</section>
-<section data-background="#212d30">
-<h3>Parsing with active patterns</h3>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-<span class="l">7: </span>
-<span class="l">8: </span>
-</pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> (|<span class="p">SceneTitle</span>|<span class="p">Name</span>|<span class="p">Word</span>|) (<span onmouseout="hideTip(event, 'fs11', 27)" onmouseover="showTip(event, 'fs11', 27)" class="i">text</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 28)" onmouseover="showTip(event, 'fs5', 28)" class="t">string</span>) <span class="o">=</span>
-    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs12', 29)" onmouseover="showTip(event, 'fs12', 29)" class="i">scenePattern</span> <span class="o">=</span> <span class="s">&quot;[ 0-9]*(INT.|EXT.)[ A-Z0-9]&quot;</span>
-    <span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 30)" onmouseover="showTip(event, 'fs13', 30)" class="i">namePattern</span> <span class="o">=</span> <span class="s">&quot;^[/A-Z0-9]+[-]*[/A-Z0-9 ]*[-]*[/A-Z0-9 ]+$&quot;</span>
-    <span class="k">if</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs11', 31)" onmouseover="showTip(event, 'fs11', 31)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs12', 32)" onmouseover="showTip(event, 'fs12', 32)" class="i">scenePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
-        <span class="p">SceneTitle</span> <span onmouseout="hideTip(event, 'fs11', 33)" onmouseover="showTip(event, 'fs11', 33)" class="i">text</span>
-    <span class="k">elif</span> <span class="i">Regex</span><span class="o">.</span><span class="i">Match</span>(<span onmouseout="hideTip(event, 'fs11', 34)" onmouseover="showTip(event, 'fs11', 34)" class="i">text</span>, <span onmouseout="hideTip(event, 'fs13', 35)" onmouseover="showTip(event, 'fs13', 35)" class="i">namePattern</span>)<span class="o">.</span><span class="i">Success</span> <span class="k">then</span>
-        <span class="p">Name</span> <span onmouseout="hideTip(event, 'fs11', 36)" onmouseover="showTip(event, 'fs11', 36)" class="i">text</span>
-    <span class="k">else</span> <span class="p">Word</span>
+            <span onmouseout="hideTip(event, 'fs5', 32)" onmouseover="showTip(event, 'fs5', 32)" class="f">parseScenes</span> <span onmouseout="hideTip(event, 'fs6', 33)" onmouseover="showTip(event, 'fs6', 33)" class="i">sceneAcc</span> (<span onmouseout="hideTip(event, 'fs18', 34)" onmouseover="showTip(event, 'fs18', 34)" class="i">name</span><span class="o">::</span><span onmouseout="hideTip(event, 'fs7', 35)" onmouseover="showTip(event, 'fs7', 35)" class="i">characterAcc</span>) <span onmouseout="hideTip(event, 'fs11', 36)" onmouseover="showTip(event, 'fs11', 36)" class="i">rest</span>
+       | <span onmouseout="hideTip(event, 'fs19', 37)" onmouseover="showTip(event, 'fs19', 37)" class="p">Word</span> <span class="k">-&gt;</span> <span class="c">// do nothing</span>
+            <span onmouseout="hideTip(event, 'fs5', 38)" onmouseover="showTip(event, 'fs5', 38)" class="f">parseScenes</span> <span onmouseout="hideTip(event, 'fs6', 39)" onmouseover="showTip(event, 'fs6', 39)" class="i">sceneAcc</span> <span onmouseout="hideTip(event, 'fs7', 40)" onmouseover="showTip(event, 'fs7', 40)" class="i">characterAcc</span> <span onmouseout="hideTip(event, 'fs11', 41)" onmouseover="showTip(event, 'fs11', 41)" class="i">rest</span>
+   | [] <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs15', 42)" onmouseover="showTip(event, 'fs15', 42)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 43)" onmouseover="showTip(event, 'fs16', 43)" class="f">rev</span> <span onmouseout="hideTip(event, 'fs6', 44)" onmouseover="showTip(event, 'fs6', 44)" class="i">sceneAcc</span>     
 </code></pre></td>
 </tr>
 </table>
@@ -229,6 +224,10 @@ the elements in bold    <br/>
 <img src="images/tion-medon-closeup.png" style="width: 900px" />
 </section>
 <section data-background="images/tion-medon-photo.png">
+</section>
+<section data-background="black">
+<h1>Jupyter notebooks on Azure with F#</h1>
+<h2><a href="https://notebooks.azure.com/evelina/libraries/starwars">notebooks.azure.com/evelina</a></h2>
 </section>
 <section data-background="images/r2d2beeps-loop3.gif">
 </section>
@@ -274,8 +273,8 @@ the elements in bold    <br/>
 </section>
 <section data-background="#000000">
 <h3><div class="sw">fsharp-swapi</div></h3>
-<p><a href="https://github.com/evelinag/fsharp-swapi">github.com/evelinag/fsharp-swapi</a></p>
-<p><a href="https://swapi.co/documentation">swapi.co</a></p>
+<h3><a href="https://github.com/evelinag/fsharp-swapi">github.com/evelinag/fsharp-swapi</a></h3>
+<h3><a href="https://swapi.co/documentation">swapi.co</a></h3>
 </section>
 <section data-background="#000000">
 <h3><div class="sw">scenes</div></h3>
@@ -317,16 +316,8 @@ Because F# works very well with JSON, maybe I can just use something that will r
 <section >
 <p><img src="images/fable.png" alt="" /></p>
 </section>
-<section >
-<p><img src="images/fable-logo.png" alt="" />
-<img src="images/fable-samples1.png" alt="" /></p>
-</section>
-<section >
-<p><img src="images/fable-logo.png" alt="" />
-<img src="images/fable-samples2.png" alt="" /></p>
-</section>
 <section data-background="images/networks/full_network-darth-vader.png">
-<a href="images/networks/interactions-merged.html" style="color: transparent;"> Big link to full network <br /> Big link to full network <br />Big link to full network </a>
+<a href="demo/index.html" style="color: transparent;"> Big link to full network <br /> Big link to full network <br />Big link to full network </a>
 </section>
 <section >
 <h3><div class="sw">the phantom menace</div></h3>
@@ -516,7 +507,7 @@ b &lt;- betweenness(network)
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">RProvider</span><span class="o">.</span><span class="i">igraph</span>
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 37)" onmouseover="showTip(event, 'fs14', 37)" class="i">b</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">betweenness</span>(<span class="i">network</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs20', 45)" onmouseover="showTip(event, 'fs20', 45)" class="i">b</span> <span class="o">=</span> <span class="i">R</span><span class="o">.</span><span class="i">betweenness</span>(<span class="i">network</span>)
 </code></pre></td>
 </tr>
 </table>
@@ -617,6 +608,18 @@ b &lt;- betweenness(network)
 <section data-background="images/darthvader-wins-loop2.gif">
 </section>
 <section >
+<img src="images/pourlascience1.jpg" style="height:600px" />
+</section>
+<section >
+<img src="images/pourlascience2.jpg" style="height:600px" />
+</section>
+<section >
+<p><img src="images/oxford1.png" alt="" /></p>
+</section>
+<section >
+<p><img src="images/oxford2.png" alt="" /></p>
+</section>
+<section >
 <h3>Star Wars network in Neo4j</h3>
 <p><img src="images/neo4j.png" alt="" /></p>
 </section>
@@ -639,27 +642,6 @@ b &lt;- betweenness(network)
 </td>
 </tr>
 </table>
-</section>
-<section >
-<h3>Network analysis in the real world</h3>
-<p><img src="images/hungarian-factory.png" alt="Real-world network" /></p>
-<font size="5">Source: A. Barabasi - Network Science, 2016.</font>
-</section>
-<section >
-<h2>Network analysis in the real world</h2>
-<p>Social networks</p>
-<p>Online chat communication</p>
-<p>Email communication</p>
-<p>Supply grids</p>
-<p>Biological networks</p>
-<p>...</p>
-<aside class="notes">
-identify thought leaders, important hubs in the company<br/>
-Betweenness in biological pathways <br/>
-Both cancer driver genes and tumour suppressor genes tend to have high betweenness in protein interaction networks <br/>
-dependencies in code <br/>
-code repositories - people who contribute to the same project<br/>
-</aside>
 </section>
 <section data-background="images/cell-betweenness.jpg">
 </section>
@@ -697,6 +679,7 @@ Why does it make sense - playing with interesting data<br/>
 <li><p><a href="http://evelinag.com/blog/2015/12-15-star-wars-social-network/index.html">The Star Wars social network</a></p></li>
 <li><p><a href="http://evelinag.com/blog/2016/01-25-social-network-force-awakens/index.html">Star Wars social networks: The Force Awakens</a></p></li>
 <li><p><a href="http://portal.graphgist.org/graph_gists/855363c7-cdeb-4c8b-b4a5-b72c8f2388e3">Star Wars Neo4j demo</a></p></li>
+<li><p><a href="https://notebooks.azure.com/evelina/libraries/starwars">Azure notebooks with parsing scripts</a></p></li>
 </ul>
 </section>
 <section data-background="images/kyloapproves-loop3.gif">
@@ -709,6 +692,7 @@ Why does it make sense - playing with interesting data<br/>
 <h2><div class="white">Evelina Gabasova</div></h2>
 <p><div class="white">@evelgab </div><br />
 <div class="white">evelinag.com/star-wars-talk</div><br />
+<div class="white">notebooks.azure.com/evelina</div><br />
 <div class="white">github.com/evelinag</div>
 </td>
 </tr>
