@@ -27,19 +27,9 @@
 
 - data-background : images/tcga-dna.jpg
 
-' During the day, I do bioinformatics and computational biology,
-' researching mechanisms of early carcinogenesis at Cambridge
-' University - I deal with DNA, genes, proteins etc...
-' It's a very important work, we work on pancreatic cancer which 
-' one of the least understood types of cancer. It's very hard to treat
-' and mortality hasn't improved much over the last 10 years, so it's a big 
-' and important challenge. We use quite a lot of methods, based on 
-' statistics, machine learning and network analysis. 
-' But biology is complex and sometimes it's a bit too much...
-
 ---
 
-- data-background : images/pathways.png
+- data-background : images/bam.png
 
 ' do you know the feeling? So because I love working with data, outside
 ' of work I like to play with other datasets, datasets that are
@@ -47,7 +37,7 @@
 
 
 </section>
-<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro.mp4" data-background-color="#000000">
+<section data-background-video="https://s3-eu-west-1.amazonaws.com/evelinag/intro-ncrafts-wide.mp4" data-background-color="#000000">
 </section>
 <section data-background-transition="fade" data-background="images/SWLogo.png" data-background-color="#000000">
 
@@ -106,9 +96,24 @@
 
 
 -----
+
 - data-background : #212d30
 
-### Parsing scripts
+### Parsing with active patterns
+
+    let (|SceneTitle|Name|Word|) (text:string) =
+        let scenePattern = "[ 0-9]*(INT.|EXT.)[ A-Z0-9]"
+        let namePattern = "^[/A-Z0-9]+[-]*[/A-Z0-9 ]*[-]*[/A-Z0-9 ]+$"
+        if Regex.Match(text, scenePattern).Success then
+            SceneTitle text
+        elif Regex.Match(text, namePattern).Success then
+            Name text
+        else Word
+
+-----
+- data-background : #212d30
+
+### Parsing scripts with pattern matching
 
     let rec parseScenes sceneAcc characterAcc (items: string list) =
        match items with
@@ -125,21 +130,9 @@
                 parseScenes sceneAcc characterAcc rest
        | [] -> List.rev sceneAcc     
 
------
-- data-background : #212d30
-
-### Parsing with active patterns
-
-    let (|SceneTitle|Name|Word|) (text:string) =
-        let scenePattern = "[ 0-9]*(INT.|EXT.)[ A-Z0-9]"
-        let namePattern = "^[/A-Z0-9]+[-]*[/A-Z0-9 ]*[-]*[/A-Z0-9 ]+$"
-        if Regex.Match(text, scenePattern).Success then
-            SceneTitle text
-        elif Regex.Match(text, namePattern).Success then
-            Name text
-        else Word
 
 -----
+
 - data-background : #550080
 
 # (| Active patterns |)
@@ -161,6 +154,14 @@ hide complexity behind readable code
 --------
 
 - data-background : images/tion-medon-photo.png
+
+-----
+
+- data-background : black
+
+# Jupyter notebooks on Azure with F#
+
+## [notebooks.azure.com/evelina](https://notebooks.azure.com/evelina/libraries/starwars)
 
 -------
 
@@ -244,9 +245,9 @@ hide complexity behind readable code
 
 ### <div class="sw">fsharp-swapi</div>
 
-[github.com/evelinag/fsharp-swapi](https://github.com/evelinag/fsharp-swapi)
+### [github.com/evelinag/fsharp-swapi](https://github.com/evelinag/fsharp-swapi)
 
-[swapi.co](https://swapi.co/documentation)
+### [swapi.co](https://swapi.co/documentation)
 
 ---
 
@@ -299,19 +300,9 @@ function drawChart() {
 
 ----------
 
-![](images/fable-logo.png)
-![](images/fable-samples1.png)
-
-----------
-
-![](images/fable-logo.png)
-![](images/fable-samples2.png)
-
-----------
-
 - data-background : images/networks/full_network-darth-vader.png
 
-<a href="images/networks/interactions-merged.html" style="color: transparent;"> Big link to full network <br /> Big link to full network <br />Big link to full network </a>
+<a href="demo/index.html" style="color: transparent;"> Big link to full network <br /> Big link to full network <br />Big link to full network </a>
 
 ----------
 
@@ -587,6 +578,22 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 
 ----------
 
+<img src="images/pourlascience1.jpg" style="height:600px" />
+
+------------------------------------------------------------------------------------------------
+
+<img src="images/pourlascience2.jpg" style="height:600px" />
+
+------------------------------------------------------------------------------------------------
+
+![](images/oxford1.png)
+
+------------------------------------------------------------------------------------------------
+
+![](images/oxford2.png)
+
+------------------------------------------------------------------------------------------------
+
 ### Star Wars network in Neo4j
 
 ![](images/neo4j.png)
@@ -617,34 +624,6 @@ S = \text{Number of shortest paths between $a$ and $b$} \\ \\
 </td>
 </tr>
 </table>
-
------
-### Network analysis in the real world
-
-![Real-world network](images/hungarian-factory.png)
-
-<font size="5">Source: A. Barabasi - Network Science, 2016.</font>
-
------
-## Network analysis in the real world
-
-Social networks
-
-Online chat communication
-
-Email communication
-
-Supply grids
-
-Biological networks
-
-...
-
-' identify thought leaders, important hubs in the company
-' Betweenness in biological pathways 
-' Both cancer driver genes and tumour suppressor genes tend to have high betweenness in protein interaction networks 
-' dependencies in code 
-' code repositories - people who contribute to the same project
 
 ----------
 
@@ -702,6 +681,8 @@ Having fun with interesting data
 
 - [Star Wars Neo4j demo](http://portal.graphgist.org/graph_gists/855363c7-cdeb-4c8b-b4a5-b72c8f2388e3)
 
+- [Azure notebooks with parsing scripts](https://notebooks.azure.com/evelina/libraries/starwars)
+
 ----------
 
 - data-background : images/kyloapproves-loop3.gif
@@ -718,6 +699,7 @@ Having fun with interesting data
 ## <div class="white">Evelina Gabasova</div>
 <div class="white">@evelgab </div><br />
 <div class="white">evelinag.com/star-wars-talk</div><br />
+<div class="white">notebooks.azure.com/evelina</div><br />
 <div class="white">github.com/evelinag</div>
 </td> 
 </tr>
